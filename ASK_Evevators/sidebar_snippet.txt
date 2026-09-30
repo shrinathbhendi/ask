@@ -1,0 +1,19 @@
+﻿                    <!-- SIDEBAR -->
+                    <div class="product-sidebar">
+                        <h3>Our <span style="color: var(--primary-red);">Specialization</span></h3>
+                        <ul class="sidebar-nav" id="product-filter">
+                            <li><a href="#" data-filter="all" class="active">All Products & Services</a></li>
+                            <li><a href="#" data-filter="passenger">Passenger Lifts</a></li>
+                            <li><a href="#" data-filter="mrl">M.R.L Lifts</a></li>
+                            <li><a href="#" data-filter="residential">Residential Lifts</a></li>
+                            <li><a href="#" data-filter="hydraulic">Hydraulic Lifts</a></li>
+                            <li><a href="#" data-filter="goods">Goods Lifts</a></li>
+                            <li><a href="#" data-filter="hospital">Hospital Stretcher</a></li>
+                            <li><a href="#" data-filter="parking">Parking Lifts</a></li>
+                            <li><a href="#" data-filter="escalators">Escalators</a></li>
+                            <li><a href="#" data-filter="dumbwaiter">Dumb Waiter</a></li>
+                            <li><a href="#" data-filter="service">Lift Service</a></li>
+                            <li><a href="#" data-filter="modification">Lift Modification</a></li>
+                            <li><a href="#" data-filter="maintenance">Lift Maintenance</a></li>
+                        </ul>
+                    </div>

@@ -1,0 +1,120 @@
+﻿                        <div class="product-grid" style="grid-template-columns: repeat(2, 1fr);" id="product-grid">
+                            
+                            <div class="product-card reveal" data-category="passenger">
+                                <div class="product-image"><img src="assets/images/gallery/gal_2.jpeg" alt="Passenger Lift"></div>
+                                <div class="product-card-body">
+                                    <h3>Passenger Lifts</h3>
+                                    <p>Smooth running and comfortable cabins designed for low to medium-rise buildings like hotels and offices.</p>
+                                    <a href="passenger-lifts.html" class="link-text">Explore</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card reveal" data-category="passenger">
+                                <div class="product-image"><img src="assets/images/gallery/gal_3.jpeg" alt="Capsule Lift"></div>
+                                <div class="product-card-body">
+                                    <h3>Capsule Lifts</h3>
+                                    <p>Architecturally stunning glass elevators that provide panoramic views and add a premium aesthetic.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+
+                            <div class="product-card reveal" data-category="mrl">
+                                <div class="product-image"><img src="assets/images/gallery/gal_6.jpeg" alt="MRL Lift"></div>
+                                <div class="product-card-body">
+                                    <h3>M.R.L Lifts</h3>
+                                    <p>Machine Room-Less elevators for buildings with limited space, offering great energy efficiency.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+
+                            <div class="product-card reveal" data-category="residential">
+                                <div class="product-image"><img src="assets/images/gallery/gal_1.jpeg" alt="Residential Lift"></div>
+                                <div class="product-card-body">
+                                    <h3>Residential Lifts</h3>
+                                    <p>Compact, trendy, and authentic designer lifts perfect for residential homes and bungalows.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card reveal" data-category="hospital">
+                                <div class="product-image"><img src="assets/images/gallery/gal_4.jpeg" alt="Hospital Lift"></div>
+                                <div class="product-card-body">
+                                    <h3>Hospital Stretcher Lifts</h3>
+                                    <p>Reliable and spacious vertical transportation designed specifically for the safe movement of patients.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+
+                            <div class="product-card reveal" data-category="hydraulic">
+                                <div class="product-image"><img src="assets/images/gallery/gal_5.jpeg" alt="Hydraulic Lift"></div>
+                                <div class="product-card-body">
+                                    <h3>Hydraulic Lifts</h3>
+                                    <p>Robust lifting solutions used in manufacturing, construction, automotive, and docking applications.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card reveal" data-category="goods">
+                                <div class="product-image"><img src="assets/images/gallery/gal_10.jpeg" alt="Goods Lift"></div>
+                                <div class="product-card-body">
+                                    <h3>Goods Lifts</h3>
+                                    <p>Heavy-duty, robust lifting solutions for factories, warehouses, and industrial plants.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+
+                            <div class="product-card reveal" data-category="parking">
+                                <div class="product-image"><img src="assets/images/gallery/gal_8.jpeg" alt="Parking Lift"></div>
+                                <div class="product-card-body">
+                                    <h3>Parking Lifts</h3>
+                                    <p>Reliable automobile elevators and stack parking systems to maximize parking efficiency in busy areas.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+
+                            <div class="product-card reveal" data-category="escalators">
+                                <div class="product-image"><img src="assets/images/gallery/gal_6.jpeg" alt="Escalators"></div>
+                                <div class="product-card-body">
+                                    <h3>Escalators</h3>
+                                    <p>Efficient continuous transport for department stores, shopping malls, transit systems, and convention centers.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+
+                            <div class="product-card reveal" data-category="dumbwaiter">
+                                <div class="product-image"><img src="assets/images/gallery/gal_7.jpeg" alt="Dumb Waiter"></div>
+                                <div class="product-card-body">
+                                    <h3>Dumb Waiter</h3>
+                                    <p>Compact service lifts providing efficient vertical transportation for moving goods effectively.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card reveal" data-category="service">
+                                <div class="product-image"><img src="assets/images/gallery/gal_18.jpeg" alt="Lift Service"></div>
+                                <div class="product-card-body">
+                                    <h3>Lift Service & AMC</h3>
+                                    <p>We offer Comprehensive, Non-Comprehensive, Predictive, and Preventive Maintenance AMC.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+
+                            <div class="product-card reveal" data-category="modification">
+                                <div class="product-image"><img src="assets/images/gallery/gal_15.jpeg" alt="Lift Modification"></div>
+                                <div class="product-card-body">
+                                    <h3>Lift Modification</h3>
+                                    <p>Upgrade and modernize your existing elevators to improve safety, aesthetics, and energy efficiency.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+
+                            <div class="product-card reveal" data-category="maintenance">
+                                <div class="product-image"><img src="assets/images/gallery/gal_11.jpeg" alt="Lift Maintenance"></div>
+                                <div class="product-card-body">
+                                    <h3>Lift Maintenance & Spares</h3>
+                                    <p>Regular servicing and rapid repair handling with genuine, high-quality OEM spare parts.</p>
+                                    <a href="#" class="link-text">Explore</a>
+                                </div>
+                            </div>
+
+                        </div>
