@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | ASK Elevators</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero-update.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -50,71 +51,269 @@
         </section>
 
         <!-- ABOUT ASK -->
-        <section class="about">
-            <div class="container">
-                <div class="about-image reveal">
-                    <img src="assets/images/gallery/gal_5.jpeg" alt="Modern Elevator Manufacturing">
+        <section class="about-showcase" id="about-showcase">
+            <div class="container about-showcase-container">
+                <div class="about-media-column reveal">
+                    <div class="media-frame-wrapper">
+                        <video autoplay loop muted playsinline poster="assets/images/gallery/gal_5.jpeg" class="showcase-video">
+                            <source src="assets/images/herovideo.mp4" type="video/mp4">
+                        </video>
+
+                        <!-- Live Badge Tag inside top-left of video -->
+                        <div class="showcase-live-pill">
+                            <span class="live-dot"></span> HD LIVE ELEVATOR SHOWCASE
+                        </div>
+
+                        <!-- Floating Glassmorphism Experience Card -->
+                        <div class="floating-exp-card">
+                            <div class="exp-number">12+</div>
+                            <div class="exp-info">
+                                <span class="exp-title">Years of Trust</span>
+                                <span class="exp-sub">Pune's Premier Elevator Brand</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-content reveal">
-                    <span class="eyebrow">Our Story</span>
-                    <h2 class="section-title">Vertical Transportation Designed Around Your Needs</h2>
-                    <p class="about-text">Established in 2012 in Pune, Maharashtra, ASK Elevators is a trusted manufacturer of Passenger Elevators, Hospital Elevators, and other lift solutions.</p>
-                    <p class="about-text">Our spacious infrastructure is equipped with advanced machinery, and our processes are systematically divided into departments handled by experienced managers.</p>
-                    <p class="about-text">Over the years, we have built a reputation for excellence, reliability, and unparalleled customer service. From conceptual design to precise installation and rigorous maintenance, our dedicated team ensures every project meets the highest standards of quality and safety.</p>
+                <!-- Right Column: Story & Features -->
+                <div class="about-text-column reveal">
+                    <div class="showcase-eyebrow">
+                        <span class="eyebrow-line"></span>
+                        <span class="eyebrow-text">OUR STORY & VISION</span>
+                    </div>
+                    <h2 class="showcase-title">
+                        Vertical Transportation <br>
+                        <span class="text-gradient">Engineered Around Your Needs</span>
+                    </h2>
+                    <p class="showcase-desc">
+                        Established in 2012 in Pune, Maharashtra, <strong>ASK Elevators</strong> is a trusted manufacturer of high-performance Passenger Elevators, Hospital Lifts, MRL Elevators, and bespoke mobility solutions.
+                    </p>
+                    <p class="showcase-desc-sub">
+                        Equipped with precision machinery and managed by experienced engineers, we combine cutting-edge technology with rigorous ISO-standard safety protocols to deliver smooth, quiet, and reliable vertical transportation.
+                    </p>
+                    <!-- Feature Grid -->
+                    <div class="showcase-features-grid">
+                        <div class="feature-box-new">
+                            <div class="feat-icon-bubble blue">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <div class="feat-details">
+                                <h5>Safety Certified</h5>
+                                <p>Multi-tier security protection</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-box-new">
+                            <div class="feat-icon-bubble red">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                </svg>
+                            </div>
+                            <div class="feat-details">
+                                <h5>Precision Craft</h5>
+                                <p>Custom engineered cabins</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-box-new">
+                            <div class="feat-icon-bubble green">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="feat-details">
+                                <h5>Energy Efficient</h5>
+                                <p>Smart VFD drive controls</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-box-new">
+                            <div class="feat-icon-bubble orange">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="feat-details">
+                                <h5>24/7 AMC Support</h5>
+                                <p>Zero downtime guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </section>
 
         <!-- VISION & MISSION -->
-        <section class="vision" style="padding: 100px 0; background-color: var(--light-blue);">
-            <div class="container">
-                <div class="split-section">
-                    <div class="split-content reveal">
-                        <span class="eyebrow">Our Philosophy</span>
-                        <h2 class="section-title">Vision & Mission</h2>
-                        <div style="margin-bottom: 30px;">
-                            <h3 style="color: var(--primary-blue); margin-bottom: 10px;">Our Vision</h3>
+        <section class="our-vision-section" id="our-vision">
+            <div class="our-vision-container">
+                <!-- Content Column (Left Side) -->
+                <div class="philosophy-content reveal">
+                    <div class="philosophy-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        OUR PHILOSOPHY
+                    </div>
+                    <h2 class="philosophy-title">
+                        Our Vision <br>
+                        <span class="text-gradient">Engineered for Lifelong Quality</span>
+                    </h2>
+                    <div class="philosophy-cards">
+                        <!-- Vision Card -->
+                        <div class="philo-card vision-card">
+                            <div class="philo-card-header">
+                                <div class="philo-card-title-group">
+                                    <div class="philo-icon-bubble">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                                        </svg>
+                                    </div>
+                                    <h3>Enduring Value & Quality</h3>
+                                </div>
+                                <span class="philo-tag">LIFELONG QUALITY</span>
+                            </div>
                             <p>"To consistently provide elevators with value for money and quality that will last forever and serve you even in the worst conditions."</p>
                         </div>
-                        <div>
-                            <h3 style="color: var(--primary-blue); margin-bottom: 10px;">Our Mission</h3>
-                            <p>To deliver safe, energy-efficient, and technologically advanced vertical transportation solutions. We strive to foster long-term relationships with our clients by prioritizing transparency, responsive maintenance, and innovative engineering.</p>
+                        <!-- Vision Card 2: Engineering Assurance -->
+                        <div class="philo-card vision-card">
+                            <div class="philo-card-header">
+                                <div class="philo-card-title-group">
+                                    <div class="philo-icon-bubble">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        </svg>
+                                    </div>
+                                    <h3>Built for Extreme Endurance</h3>
+                                </div>
+                                <span class="philo-tag">ISO CERTIFIED BUILD</span>
+                            </div>
+
+                            <p>Engineered using high-grade stainless steel, precision micro-controllers, and heavy-duty gearless drive machinery built to perform smoothly under high duty cycles.</p>
                         </div>
                     </div>
-                    <div class="split-image reveal">
-                        <img src="assets/images/gallery/gal_1.jpeg" alt="Corporate Vision">
+                </div>
+                <!-- Media Column (Right Side - mixphoto.png) -->
+                <div class="philosophy-media-column reveal">
+                    <div class="philosophy-frame-wrapper">
+                        <img src="assets/images/mixphoto.png" alt="ASK Elevators Cabin Showcase" class="philosophy-img">
+                        
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             SECTION 2: OUR MISSION
+             ========================================= -->
+        <section class="our-mission-section" id="our-mission">
+            <div class="our-mission-container">
+                <div class="mission-header reveal">
+                    <div class="philosophy-badge" style="background: rgba(237, 28, 36, 0.1); color: #ED1C24;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        DRIVING THE FUTURE
+                    </div>
+                    <h2 class="philosophy-title" style="margin-top: 14px;">
+                        Our Mission <br>
+                        <span class="text-gradient">Safe, Smart & Sustainable Mobility</span>
+                    </h2>
+                </div>
+
+                <div class="mission-cards-wrapper reveal">
+                    <!-- Hero Mission Card -->
+                    <div class="mission-hero-card">
+                        <div class="philo-card-header" style="border-bottom: 1px solid rgba(255, 255, 255, 0.15); padding-bottom: 16px; margin-bottom: 16px;">
+                            <div class="philo-card-title-group">
+                                <div class="philo-icon-bubble" style="background: rgba(237, 28, 36, 0.2); color: #FF4D4D;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                                        <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-3.05 11a22.35 22.35 0 0 1-3.95 2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 style="color: #FFFFFF; font-size: 22px;">Our Core Operational Mission</h3>
+                            </div>
+                            <span class="philo-tag" style="background: rgba(237, 28, 36, 0.2); color: #FF6B6B;">ADVANCED MOBILITY</span>
+                        </div>
+                        <p>"To deliver safe, energy-efficient, and technologically advanced vertical transportation solutions. We strive to foster long-term relationships with our clients by prioritizing transparency, responsive maintenance, and innovative engineering."</p>
+                    </div>
+
+                    <!-- 3 Mission Pillars Grid -->
+                    <div class="mission-pillars-grid">
+                        <div class="mission-pillar-card">
+                            <div class="mission-pillar-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <h4>Uncompromised Safety</h4>
+                            <p>Strict ISO safety compliance with multi-stage brake interlocks, overload sensors, and automatic rescue devices (ARD).</p>
+                        </div>
+
+                        <div class="mission-pillar-card">
+                            <div class="mission-pillar-icon" style="background: rgba(34, 197, 94, 0.1); color: #16A34A;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                </svg>
+                            </div>
+                            <h4>Smart Energy Efficiency</h4>
+                            <p>Advanced VVVF variable frequency drives and eco LED cabin lighting that save up to 40% electrical power consumption.</p>
+                        </div>
+
+                        <div class="mission-pillar-card">
+                            <div class="mission-pillar-icon" style="background: rgba(237, 28, 36, 0.1); color: #ED1C24;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <h4>24/7 AMC Support</h4>
+                            <p>Dedicated engineering teams in Pune ensuring rapid emergency breakdown response and complete transparent care.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CORE VALUES -->
-        <section class="why-ask" style="padding: 100px 0; background-color: var(--light-blue);">
-            <div class="container">
-                <div class="text-center reveal">
-                    <span class="eyebrow">Why Choose Us</span>
-                    <h2 class="section-title">Our Core Values</h2>
+
+
+
+
+
+
                 </div>
                 
-                <div class="why-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px;">
-                    <div class="feature-box reveal" style="background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                        <div class="feature-icon" style="font-size: 40px; margin-bottom: 20px;">🛡️</div>
-                        <h4 style="font-size: 20px; margin-bottom: 15px;">Safety First</h4>
-                        <p style="color: var(--text-secondary);">We adhere to the strictest safety protocols, ensuring every elevator we install operates flawlessly and protects its passengers.</p>
-                    </div>
-                    <div class="feature-box reveal" style="background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                        <div class="feature-icon" style="font-size: 40px; margin-bottom: 20px;">⚙️</div>
-                        <h4 style="font-size: 20px; margin-bottom: 15px;">Quality Engineering</h4>
-                        <p style="color: var(--text-secondary);">Using premium materials and advanced machinery, we craft elevators that are durable, reliable, and aesthetically pleasing.</p>
-                    </div>
-                    <div class="feature-box reveal" style="background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                        <div class="feature-icon" style="font-size: 40px; margin-bottom: 20px;">🤝</div>
-                        <h4 style="font-size: 20px; margin-bottom: 15px;">Customer Commitment</h4>
-                        <p style="color: var(--text-secondary);">From your first inquiry to ongoing AMC maintenance, our transparent communication and dedicated support never wavers.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
 
     <!-- FOOTER INJECT CONTAINER -->

@@ -165,24 +165,232 @@ document.addEventListener('DOMContentLoaded', () => {
         resetHeroInterval();
     }
 
-    // --- 7. PRODUCT CAROUSEL ---
+    // --- 7. PRODUCT CAROUSEL (2-CARDS STEP SLIDER) ---
     const carouselTrack = document.getElementById('carouselTrack');
     const carouselPrev = document.getElementById('carousel-prev');
     const carouselNext = document.getElementById('carousel-next');
-    
+
     if (carouselTrack) {
-        // Hide arrows for continuous marquee
-        if (carouselPrev) carouselPrev.style.display = 'none';
-        if (carouselNext) carouselNext.style.display = 'none';
-        
-        // Clone children for seamless scroll
-        const cards = Array.from(carouselTrack.children);
-        cards.forEach(card => {
-            const clone = card.cloneNode(true);
-            carouselTrack.appendChild(clone);
+        const productCards = Array.from(carouselTrack.children);
+        const totalProducts = productCards.length;
+        let currentProdIndex = 0;
+
+        function getProdCardsPerView() {
+            if (window.innerWidth <= 600) return 1;
+            if (window.innerWidth <= 992) return 2;
+            return 3;
+        }
+
+        function updateProdSlider() {
+            const cardsPerView = getProdCardsPerView();
+            const maxIndex = Math.max(0, totalProducts - cardsPerView);
+            if (currentProdIndex > maxIndex) currentProdIndex = maxIndex;
+            if (currentProdIndex < 0) currentProdIndex = 0;
+
+            const firstCard = productCards[0];
+            if (!firstCard) return;
+            const cardWidth = firstCard.getBoundingClientRect().width;
+            const gap = parseInt(window.getComputedStyle(carouselTrack).gap) || 24;
+
+            const moveAmount = (cardWidth + gap) * currentProdIndex;
+            carouselTrack.style.transform = `translateX(-${moveAmount}px)`;
+            carouselTrack.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+        }
+
+        function nextProdSlide() {
+            const step = 2; // Shift 2 cards at a time!
+            const cardsPerView = getProdCardsPerView();
+            const maxIndex = totalProducts - cardsPerView;
+            if (currentProdIndex >= maxIndex) {
+                currentProdIndex = 0;
+            } else {
+                currentProdIndex += step;
+                if (currentProdIndex > maxIndex) currentProdIndex = maxIndex;
+            }
+            updateProdSlider();
+        }
+
+        function prevProdSlide() {
+            const step = 2; // Shift 2 cards back at a time!
+            const cardsPerView = getProdCardsPerView();
+            const maxIndex = totalProducts - cardsPerView;
+            if (currentProdIndex <= 0) {
+                currentProdIndex = maxIndex > 0 ? maxIndex : 0;
+            } else {
+                currentProdIndex -= step;
+                if (currentProdIndex < 0) currentProdIndex = 0;
+            }
+            updateProdSlider();
+        }
+
+        if (carouselNext) {
+            carouselNext.style.display = 'flex';
+            carouselNext.addEventListener('click', () => {
+                nextProdSlide();
+                resetProdAutoSlide();
+            });
+        }
+        if (carouselPrev) {
+            carouselPrev.style.display = 'flex';
+            carouselPrev.addEventListener('click', () => {
+                prevProdSlide();
+                resetProdAutoSlide();
+            });
+        }
+
+        let prodInterval;
+        function resetProdAutoSlide() {
+            clearInterval(prodInterval);
+            prodInterval = setInterval(nextProdSlide, 5000);
+        }
+
+        updateProdSlider();
+        resetProdAutoSlide();
+
+        window.addEventListener('resize', updateProdSlider);
+    }
+
+    // --- 8. TESTIMONIALS (2-CARDS STEP SLIDER) ---
+    const testiTrack = document.getElementById('testiTrack');
+    const testiPrev = document.getElementById('testi-prev');
+    const testiNext = document.getElementById('testi-next');
+    const testiDotsContainer = document.getElementById('testiDots');
+
+    if (testiTrack) {
+        const testiCards = Array.from(testiTrack.children);
+        const totalCards = testiCards.length;
+        let currentTestiIndex = 0;
+
+        function getTestiCardsPerView() {
+            return window.innerWidth <= 768 ? 1 : 2;
+        }
+
+        function updateTestiSlider() {
+            const cardsPerView = getTestiCardsPerView();
+            const maxIndex = Math.max(0, totalCards - cardsPerView);
+            if (currentTestiIndex > maxIndex) currentTestiIndex = maxIndex;
+            if (currentTestiIndex < 0) currentTestiIndex = 0;
+
+            const firstCard = testiCards[0];
+            if (!firstCard) return;
+            const cardWidth = firstCard.getBoundingClientRect().width;
+            const gap = parseInt(window.getComputedStyle(testiTrack).gap) || 24;
+
+            const moveAmount = (cardWidth + gap) * currentTestiIndex;
+            testiTrack.style.transform = `translateX(-${moveAmount}px)`;
+            testiTrack.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+
+            if (testiDotsContainer) {
+                const activeDotIndex = Math.floor(currentTestiIndex / cardsPerView);
+                Array.from(testiDotsContainer.children).forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === activeDotIndex);
+                });
+            }
+        }
+
+        function createTestiDots() {
+            if (!testiDotsContainer) return;
+            testiDotsContainer.innerHTML = '';
+            const cardsPerView = getTestiCardsPerView();
+            const totalDots = Math.ceil(totalCards / cardsPerView);
+
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('testi-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                dot.addEventListener('click', () => {
+                    currentTestiIndex = i * cardsPerView;
+                    updateTestiSlider();
+                    resetTestiAutoSlide();
+                });
+                testiDotsContainer.appendChild(dot);
+            }
+        }
+
+        function nextTestiSlide() {
+            const cardsPerView = getTestiCardsPerView();
+            const maxIndex = totalCards - cardsPerView;
+            if (currentTestiIndex >= maxIndex) {
+                currentTestiIndex = 0;
+            } else {
+                currentTestiIndex += cardsPerView; // shift 2 cards at a time!
+                if (currentTestiIndex > maxIndex) currentTestiIndex = maxIndex;
+            }
+            updateTestiSlider();
+        }
+
+        function prevTestiSlide() {
+            const cardsPerView = getTestiCardsPerView();
+            const maxIndex = totalCards - cardsPerView;
+            if (currentTestiIndex <= 0) {
+                currentTestiIndex = maxIndex > 0 ? maxIndex : 0;
+            } else {
+                currentTestiIndex -= cardsPerView; // shift 2 cards back at a time!
+                if (currentTestiIndex < 0) currentTestiIndex = 0;
+            }
+            updateTestiSlider();
+        }
+
+        if (testiNext) {
+            testiNext.addEventListener('click', () => {
+                nextTestiSlide();
+                resetTestiAutoSlide();
+            });
+        }
+        if (testiPrev) {
+            testiPrev.addEventListener('click', () => {
+                prevTestiSlide();
+                resetTestiAutoSlide();
+            });
+        }
+
+        let testiInterval;
+        function resetTestiAutoSlide() {
+            clearInterval(testiInterval);
+            testiInterval = setInterval(nextTestiSlide, 5000);
+        }
+
+        createTestiDots();
+        updateTestiSlider();
+        resetTestiAutoSlide();
+
+        window.addEventListener('resize', () => {
+            createTestiDots();
+            updateTestiSlider();
         });
-        
-        // Add marquee class
-        carouselTrack.classList.add('marquee-mode');
+    }
+
+    // --- 10. COUNTER STATS NUMBER ANIMATION ---
+    const counterElements = document.querySelectorAll('.counter-val');
+    if (counterElements.length > 0) {
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const endVal = parseInt(target.getAttribute('data-target'), 10);
+                    let startVal = 0;
+                    const duration = 2000;
+                    const stepTime = 30;
+                    const steps = duration / stepTime;
+                    const increment = endVal / steps;
+
+                    const timer = setInterval(() => {
+                        startVal += increment;
+                        if (startVal >= endVal) {
+                            target.textContent = endVal;
+                            clearInterval(timer);
+                        } else {
+                            target.textContent = Math.ceil(startVal);
+                        }
+                    }, stepTime);
+
+                    observer.unobserve(target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        counterElements.forEach(el => counterObserver.observe(el));
     }
 });
+
