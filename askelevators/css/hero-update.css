@@ -28,9 +28,9 @@
     background-image: linear-gradient(rgba(244, 246, 250, 0.96), rgba(244, 246, 250, 0.96)), linear-gradient(135deg, #0284c7 0%, #ef4444 100%) !important;
     background-origin: border-box !important;
     background-clip: padding-box, border-box !important;
-    padding: 10px 26px;
+    padding: 14px 32px;
     border-radius: 60px;
-    max-width: 1050px;
+    max-width: 1180px;
     margin: 20px auto;
     transition: all 0.3s ease;
 }
@@ -42,9 +42,9 @@
     left: 0 !important;
     right: 0 !important;
     margin: 0 auto !important;
-    padding: 10px 26px !important;
+    padding: 14px 32px !important;
     border-radius: 60px !important;
-    max-width: 1050px !important;
+    max-width: 1180px !important;
     width: 90% !important;
     z-index: 9999 !important;
     box-shadow: 0 14px 40px rgba(2, 132, 199, 0.18), 0 6px 25px rgba(239, 68, 68, 0.15) !important;
@@ -59,15 +59,18 @@
     align-items: center;
 }
 .new-navbar .logo img {
-    height: 44px;
+    height: 58px;
+    width: auto;
+    object-fit: contain;
+    transition: height 0.3s ease;
 }
 .new-navbar .nav-menu {
     display: flex;
-    gap: 32px;
+    gap: 34px;
 }
 .new-navbar .nav-link {
     font-family: var(--font-heading);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: #1e293b;
     text-decoration: none;
@@ -107,8 +110,9 @@
     background: linear-gradient(135deg, #0284c7 0%, #ed1c24 100%) !important;
     color: #ffffff !important;
     border-radius: 50px !important;
-    padding: 10px 24px !important;
+    padding: 12px 26px !important;
     font-family: var(--font-heading);
+    font-size: 15px;
     font-weight: 700 !important;
     border: none;
     transition: all 0.3s ease;
@@ -132,8 +136,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: -120px !important;
-    padding-top: 120px !important;
+    margin-top: -180px !important;
+    padding-top: 180px !important;
     border-top: none !important;
     border-bottom: none !important;
     box-shadow: none !important;
@@ -1422,6 +1426,12 @@
 
 
 @media (max-width: 768px) {
+    .new-navbar {
+        padding: 10px 20px !important;
+    }
+    .new-navbar .logo img {
+        height: 48px;
+    }
     .new-navbar.scrolled {
         position: fixed !important;
         top: 15px !important;
@@ -2357,18 +2367,57 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .custom-projects-section {
+        padding: 50px 0 !important;
+        overflow: hidden !important;
+    }
+
     .projects-grid-layout {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        padding: 0 16px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
-    .project-item-card.span-2 {
-        grid-column: span 1;
+
+    .project-item-card,
+    .project-item-card.span-2,
+    .project-item-card.short {
+        width: 100% !important;
+        grid-column: span 1 !important;
+        border-radius: 16px !important;
+        box-sizing: border-box !important;
     }
+
+    .project-card-image-box,
+    .project-item-card.short .project-card-image-box {
+        height: 250px !important;
+        width: 100% !important;
+    }
+
+    .project-card-image-box img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .project-card-overlay {
+        padding: 20px 18px !important;
+    }
+
+    .project-card-overlay h3 {
+        font-size: 18px !important;
+        line-height: 1.3 !important;
+    }
+
+    .project-card-overlay p {
+        font-size: 12.5px !important;
+    }
+
     .custom-projects-section .projects-main-heading {
-        font-size: 30px;
-    }
-    .project-card-image-box {
-        height: 260px !important;
+        font-size: 26px !important;
     }
 }
 
@@ -3190,22 +3239,8 @@
     color: #FFFFFF;
 }
 
-@media (max-width: 992px) {
-    .philosophy-container, .our-vision-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .philosophy-img {
-        height: auto;
-        max-height: 480px;
-    }
-    .mission-pillars-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* =========================================
-   1. OUR VISION SECTION
+   1. OUR VISION SECTION (Desktop Base)
    ========================================= */
 .our-vision-section {
     padding: 100px 0;
@@ -3225,7 +3260,7 @@
 }
 
 /* =========================================
-   2. OUR MISSION SECTION
+   2. OUR MISSION SECTION (Desktop Base)
    ========================================= */
 .our-mission-section {
     padding: 100px 0;
@@ -3333,17 +3368,366 @@
     margin: 0;
 }
 
+/* =========================================
+   MEDIA QUERIES (Overridden only for tablets & mobile)
+   ========================================= */
+@media (max-width: 992px) {
+    .philosophy-container, .our-vision-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 35px !important;
+    }
+    .philosophy-content {
+        order: 1 !important;
+        width: 100% !important;
+    }
+    .philosophy-media-column {
+        order: 2 !important;
+        width: 100% !important;
+    }
+    .philosophy-img {
+        height: auto;
+        min-height: 0 !important;
+        max-height: 480px;
+    }
+    .mission-pillars-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* VISION SECTION MOBILE */
+    .our-vision-section {
+        padding: 50px 0;
+        overflow: hidden;
+    }
+
+    .our-vision-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+        padding: 0 16px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .philosophy-content {
+        order: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .philosophy-title {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .philosophy-cards {
+        gap: 16px;
+        width: 100%;
+    }
+
+    .philo-card {
+        padding: 20px 16px;
+        border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .philo-card-header {
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+
+    .philo-card-title-group {
+        gap: 10px;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .philo-card h3 {
+        font-size: 17px;
+        line-height: 1.35;
+        word-break: break-word;
+    }
+
+    .philo-tag {
+        font-size: 10px;
+        padding: 3px 10px;
+        flex-shrink: 0;
+    }
+
+    .philo-card p {
+        font-size: 13.5px;
+        line-height: 1.6;
+    }
+
+    .philosophy-media-column {
+        order: 2 !important;
+        width: 100% !important;
+        margin-top: 15px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .philosophy-frame-wrapper {
+        width: 100% !important;
+        border-radius: 18px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    .philosophy-img {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: 380px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        border-radius: 18px !important;
+        display: block !important;
+    }
+
+    .philo-floating-badge {
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        padding: 10px 14px;
+        border-radius: 12px;
+    }
+
+    .philo-badge-text h6 {
+        font-size: 13px;
+    }
+
+    .philo-badge-text span {
+        font-size: 11px;
+    }
+
+    .philo-badge-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* MISSION SECTION MOBILE */
+    .our-mission-section {
+        padding: 50px 0;
+        overflow: hidden;
+    }
+
+    .our-mission-container {
+        padding: 0 16px;
+        gap: 24px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mission-hero-card {
+        padding: 20px 16px;
+        border-radius: 18px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mission-hero-card .philo-card-header {
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+    }
+
+    .mission-hero-card .philo-card-title-group h3 {
+        font-size: 18px;
+        line-height: 1.35;
+        word-break: break-word;
+    }
+
+    .mission-hero-card p {
+        font-size: 13.5px;
+        line-height: 1.65;
+        margin-top: 10px;
+    }
+
+    .mission-pillars-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    .mission-pillar-card {
+        padding: 20px 16px;
+        border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mission-pillar-card h4 {
+        font-size: 17px;
+        margin-bottom: 6px;
+    }
+
+    .mission-pillar-card p {
+        font-size: 13.5px;
+        line-height: 1.6;
+    }
+
+    /* PRODUCTS SECTION MOBILE VISIBILITY FIX */
+    .products,
+    .product-section-custom {
+        padding: 40px 0 !important;
+        overflow: visible !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+
+    .product-grid,
+    .products-grid-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .product-card,
+    .product-grid-card,
+    .product-filter-wrapper {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .product-card img,
+    .product-card-img-container img {
+        height: 220px !important;
+        width: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* MASONRY GALLERY PAGE MOBILE FIX (1-COLUMN VERTICAL STACKED PHOTOS) */
+    .masonry-gallery-section,
+    .masonry-gallery-section .container,
+    .masonry-gallery-section .container.reveal,
+    .masonry-gallery-section .reveal {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .masonry-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        margin-top: 20px !important;
+        width: 100% !important;
+        column-count: 1 !important;
+        box-sizing: border-box !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .masonry-item,
+    .masonry-item.reveal,
+    .masonry-item:nth-child(1),
+    .masonry-item:nth-child(4),
+    .masonry-item.span-2,
+    .masonry-item.large,
+    .masonry-item.wide,
+    .masonry-item.tall {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        display: block !important;
+        position: relative !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 260px !important;
+        border-radius: 16px !important;
+        box-sizing: border-box !important;
+        margin-bottom: 0 !important;
+        break-inside: auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+
+    .masonry-item img {
+        width: 100% !important;
+        height: 260px !important;
+        object-fit: cover !important;
+        border-radius: 16px !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .masonry-overlay {
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: translateY(100%) !important;
+        opacity: 0 !important;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease !important;
+        background: linear-gradient(to top, rgba(15,23,42,0.95), rgba(15,23,42,0.5) 70%, transparent) !important;
+        padding: 20px 16px !important;
+        border-radius: 0 0 16px 16px !important;
+    }
+
+    .masonry-item:hover .masonry-overlay,
+    .masonry-item:active .masonry-overlay,
+    .masonry-item:focus .masonry-overlay {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+    }
+
+    .masonry-overlay h4 {
+        font-size: 18px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .masonry-overlay p {
+        font-size: 12.5px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .masonry-overlay .gallery-cat-badge {
+        font-size: 10px !important;
+        padding: 3px 10px !important;
+        margin-bottom: 6px !important;
+    }
+}
+
 /* Global Clean Reset - Remove White Line / Borders From Every Hero Section */
 .top-bar {
     border: none !important;
     border-bottom: none !important;
     box-shadow: none !important;
+    margin-bottom: 0 !important;
 }
 
 header,
 .navbar,
 .new-navbar {
+    border: none !important;
     border-bottom: none !important;
+    outline: none !important;
 }
 
 .hero-new,
@@ -3353,6 +3737,9 @@ header,
 .hero-gallery,
 .hero-contact,
 .hero-passenger {
+    margin-top: -180px !important;
+    padding-top: 180px !important;
+    border: none !important;
     border-top: none !important;
     border-bottom: none !important;
     outline: none !important;
@@ -3362,6 +3749,7 @@ header,
 .hero-new::before,
 .inner-page-hero::before {
     border: none !important;
+    outline: none !important;
 }
 
 /* ==========================================================================
@@ -3612,6 +4000,50 @@ header,
         padding: 32px 24px;
     }
 }
+
+/* ==========================================================================
+   BREADCRUMB COMPONENT FOR HERO SECTIONS
+   ========================================================================== */
+.breadcrumb-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 18px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    margin-bottom: 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.breadcrumb-wrapper a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.breadcrumb-wrapper a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    user-select: none;
+}
+
+.breadcrumb-current {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
 
 
 
