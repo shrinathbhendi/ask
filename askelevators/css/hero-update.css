@@ -4044,6 +4044,282 @@ header,
     font-weight: 700;
 }
 
+/* ==========================================================================
+   MOBILE MENU POPUP & RESPONSIVE TYPOGRAPHY (PHONE VIEW ONLY)
+   ========================================================================== */
+
+/* Dark Backdrop Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.5);
+    z-index: 100000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.mobile-drawer-open {
+    overflow: hidden !important;
+    touch-action: none;
+}
+
+/* Ensure navbar stacking context rises above overlay when drawer is open, and clear navbar backdrop filter */
+body.mobile-drawer-open .new-navbar,
+.new-navbar:has(.nav-menu.active) {
+    z-index: 100005 !important;
+}
+
+@media (max-width: 991px) {
+    body.mobile-drawer-open .new-navbar {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+}
+
+/* Desktop & Laptop Guard (min-width: 992px) */
+@media (min-width: 992px) {
+    .mobile-toggle {
+        display: none !important;
+    }
+    .drawer-header {
+        display: none !important;
+    }
+}
+
+/* Mobile & Tablet Drawer (Phone View ONLY - Pop-up from RIGHT side half screen) */
+@media (max-width: 991px) {
+    .new-navbar {
+        padding: 10px 20px !important;
+        margin: 10px auto !important;
+        top: 10px !important;
+        width: 92% !important;
+        border-radius: 40px !important;
+    }
+    .new-navbar .logo img {
+        height: 44px !important;
+    }
+    .new-navbar.scrolled {
+        top: 10px !important;
+        padding: 10px 20px !important;
+        width: 92% !important;
+        border-radius: 40px !important;
+    }
+
+    .new-navbar .mobile-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        z-index: 1001;
+    }
+
+    .new-navbar .mobile-toggle span {
+        width: 24px;
+        height: 2.5px;
+        background-color: #1E293B;
+        display: block;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .new-navbar .mobile-toggle.active span:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+    }
+    .new-navbar .mobile-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .new-navbar .mobile-toggle.active span:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+    }
+
+    /* RIGHT SIDE HALF-SCREEN SLIDE POPUP */
+    .new-navbar .nav-menu {
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important; /* Pop-up comes from RIGHT side */
+        left: auto !important;
+        width: 70vw !important;
+        min-width: 240px !important;
+        max-width: 320px !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        background: #FFFFFF !important;
+        z-index: 100010 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0 0 24px 0 !important;
+        transform: translateX(105%) !important; /* Hidden off-screen on the RIGHT */
+        transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.32s ease, visibility 0.32s ease !important;
+        overflow-y: auto !important;
+        border-radius: 0 !important;
+        border-top-left-radius: 20px !important;
+        border-bottom-left-radius: 20px !important;
+        border: none !important;
+        filter: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        box-shadow: -10px 0 35px rgba(0, 0, 0, 0.22) !important;
+    }
+
+    .new-navbar .nav-menu.active {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+
+    .drawer-header {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 24px 16px 24px;
+        background: #FFFFFF;
+        width: 100%;
+        border-bottom: 1px solid #EEF2F6;
+    }
+
+    .drawer-title {
+        font-family: var(--font-heading);
+        font-size: 16px;
+        font-weight: 800;
+        color: #0F172A;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .drawer-close-btn {
+        background: #F1F5F9;
+        border: none;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #475467;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .drawer-close-btn:hover {
+        background: #ED1C24;
+        color: #FFFFFF;
+    }
+
+    .new-navbar .nav-menu .nav-link {
+        display: block !important;
+        padding: 16px 24px !important;
+        font-family: var(--font-heading) !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #1E293B !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid #F1F5F9 !important;
+        transition: all 0.2s ease !important;
+        text-align: left !important;
+    }
+
+    .new-navbar .nav-menu .nav-link:hover,
+    .new-navbar .nav-menu .nav-link.active {
+        color: #ED1C24 !important;
+        background: #F8FAFC !important;
+        padding-left: 28px !important;
+    }
+
+    .new-navbar .nav-menu .nav-link::after {
+        display: none !important;
+    }
+
+    .new-navbar .get-quote-btn {
+        display: none !important;
+    }
+}
+
+/* Hero Text Size Reduction & Vertical Clearance (Phone View ONLY) */
+@media (max-width: 768px) {
+    .hero-new {
+        min-height: auto !important;
+        height: auto !important;
+        padding-top: 175px !important; /* Ensure subtitle text clears floating navbar */
+        padding-bottom: 50px !important;
+    }
+
+    .hero-new-container {
+        padding: 0 20px !important;
+    }
+
+    .hero-new-left {
+        max-width: 100% !important;
+        padding: 10px 0 !important;
+    }
+
+    .hero-subtitle-wrapper {
+        margin-bottom: 12px !important;
+        gap: 10px !important;
+    }
+
+    .subtitle-line {
+        width: 32px !important;
+        height: 2.5px !important;
+    }
+
+    .hero-subtitle {
+        font-size: 11px !important;
+        letter-spacing: 2.5px !important;
+    }
+
+    .hero-title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 14px !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    .hero-desc {
+        font-size: 14px !important;
+        line-height: 1.55 !important;
+        margin-bottom: 20px !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-new {
+        padding-top: 170px !important;
+    }
+
+    .hero-title {
+        font-size: 28px !important;
+        line-height: 1.22 !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 10.5px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .hero-desc {
+        font-size: 13.5px !important;
+    }
+}
+
+
 
 
 

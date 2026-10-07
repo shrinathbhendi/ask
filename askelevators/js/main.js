@@ -43,18 +43,68 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 3. MOBILE MENU TOGGLE ---
+    // --- 3. MOBILE MENU TOGGLE (RIGHT SIDE DRAWER) ---
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navBtn = document.querySelector('.navbar .btn');
     
-    if (mobileToggle) {
+    if (mobileToggle && navMenu) {
+        // Create backdrop overlay if it doesn't exist
+        let overlay = document.querySelector('.mobile-menu-overlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'mobile-menu-overlay';
+            document.body.appendChild(overlay);
+        }
+
+        // Inject drawer close button if not present
+        if (!navMenu.querySelector('.drawer-close-btn')) {
+            const drawerHeader = document.createElement('div');
+            drawerHeader.className = 'drawer-header';
+            drawerHeader.innerHTML = `
+                <span class="drawer-title">Menu</span>
+                <button class="drawer-close-btn" aria-label="Close menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            `;
+            navMenu.insertBefore(drawerHeader, navMenu.firstChild);
+            
+            const closeBtn = drawerHeader.querySelector('.drawer-close-btn');
+            closeBtn.addEventListener('click', closeMobileMenu);
+        }
+
+        function openMobileMenu() {
+            mobileToggle.classList.add('active');
+            navMenu.classList.add('active');
+            if (overlay) overlay.classList.add('active');
+            document.body.classList.add('mobile-drawer-open');
+        }
+
+        function closeMobileMenu() {
+            mobileToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
+            document.body.classList.remove('mobile-drawer-open');
+        }
+
         mobileToggle.addEventListener('click', () => {
-            mobileToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            if (navBtn) {
-                navBtn.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
             }
+        });
+
+        if (overlay) {
+            overlay.addEventListener('click', closeMobileMenu);
+        }
+
+        // Close menu when clicking nav links
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
         });
     }
     
