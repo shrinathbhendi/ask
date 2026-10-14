@@ -1,9 +1,9 @@
-/**
+;/**
  * ASK ELEVATORS - MAIN JS
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- 1. NAVBAR SCROLL EFFECT ---
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 2. SCROLL REVEAL ANIMATIONS ---
     const revealElements = document.querySelectorAll('.reveal');
-    
+
     const revealOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
     };
 
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+    const revealOnScroll = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Automatically add reveal class to all sections for animation
     document.querySelectorAll('section').forEach(sec => {
-        if(!sec.classList.contains('reveal')) {
+        if (!sec.classList.contains('reveal')) {
             sec.classList.add('reveal');
             revealOnScroll.observe(sec);
         }
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navBtn = document.querySelector('.navbar .btn');
-    
+
     if (mobileToggle && navMenu) {
         // Create backdrop overlay if it doesn't exist
         let overlay = document.querySelector('.mobile-menu-overlay');
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </button>
             `;
             navMenu.insertBefore(drawerHeader, navMenu.firstChild);
-            
+
             const closeBtn = drawerHeader.querySelector('.drawer-close-btn');
             closeBtn.addEventListener('click', closeMobileMenu);
         }
@@ -107,29 +107,29 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', closeMobileMenu);
         });
     }
-    
+
     // --- 4. FORM VALIDATION ---
     const enquiryForm = document.getElementById('enquiry-form');
     if (enquiryForm) {
         enquiryForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const email = document.getElementById('email').value;
             const req = document.getElementById('requirement').value;
             const msg = document.getElementById('message').value;
-            
-            if(name && phone && email && req && msg) {
+
+            if (name && phone && email && req && msg) {
                 const btn = enquiryForm.querySelector('button');
                 const originalText = btn.textContent;
-                
+
                 btn.textContent = 'Message Sent Successfully!';
                 btn.style.backgroundColor = '#25D366';
                 btn.style.borderColor = '#25D366';
-                
+
                 enquiryForm.reset();
-                
+
                 setTimeout(() => {
                     btn.textContent = originalText;
                     btn.style.backgroundColor = '';

@@ -72,7 +72,11 @@
     <header class="navbar new-navbar" id="navbar">
         <div class="container nav-inner">
             <a href="index.html" class="logo">
-                <img src="assets/images/about/ask-logo.png" alt="ASK Elevators Logo">
+                <img src="assets/images/about/ask-icon.png" alt="ASK Elevators Logo" class="logo-icon-img">
+                <span class="logo-text">
+                    <span class="logo-l1">ASK</span>
+                    <span class="logo-l2">ELEVATORS</span>
+                </span>
             </a>
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
@@ -92,11 +96,13 @@
     <main>
         <section class="inner-page-hero hero-gallery">
             <div class="container text-center reveal">
-                <nav class="breadcrumb-wrapper" aria-label="breadcrumb">
-                    <a href="index.html">Home</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <span class="breadcrumb-current">Gallery</span>
-                </nav>
+                <div class="breadcrumb-box">
+                    <nav class="breadcrumb-wrapper" aria-label="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-current">Gallery</span>
+                    </nav>
+                </div>
                 <span class="eyebrow" style="color: var(--white); opacity: 0.8;">Portfolio</span>
                 <h1 style="color: var(--white);">Our Work</h1>
                 <p style="color: var(--white); max-width: 600px; margin: 15px auto 0; opacity: 0.9;">Take a look at some of our finest elevator installations, custom cabin designs, and engineering projects delivered across Pune.</p>
@@ -105,14 +111,13 @@
 
         <!-- MASONRY GALLERY -->
         <section class="masonry-gallery-section">
-            <div class="container text-center reveal" style="margin-bottom: 35px;">
+            <div class="container text-center reveal gallery-title-container" style="margin-bottom: 35px;">
                 <span class="eyebrow">Visual Excellence</span>
                 <h2 class="section-title">Our Project & Product Gallery</h2>
-                <p style="max-width: 650px; margin: 0 auto; color: var(--text-secondary);">Explore our complete portfolio of premium elevator installations, custom designer cabin interiors, commercial escalators, glass capsule lifts, and medical stretcher solutions across Pune.</p>
             </div>
 
             <!-- GALLERY CATEGORY FILTER TABS -->
-            <div class="container">
+            <div class="container gallery-filter-container">
                 <div class="product-filter-wrapper reveal" style="margin-top: 15px; margin-bottom: 40px;">
                     <ul class="product-horizontal-filter" id="gallery-filter">
                         <li><a href="#" data-filter="all" class="active">All Photos</a></li>

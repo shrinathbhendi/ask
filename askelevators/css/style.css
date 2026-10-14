@@ -2501,6 +2501,7 @@ a {
         font-size: 40vw;
     }
 }
+/* =========================================
    UNIQUE HERO LAYOUT
 ========================================= */
 .hero-unique {
@@ -3097,6 +3098,7 @@ section { margin-bottom: 20px; }
 .showcase-title .text-gradient {
     background: linear-gradient(135deg, #0878C9 0%, #055A98 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -3250,6 +3252,7 @@ section { margin-bottom: 20px; }
 .philosophy-title .text-gradient {
     background: linear-gradient(135deg, #0878C9 0%, #055A98 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -3867,8 +3870,41 @@ section { margin-bottom: 20px; }
         opacity: 1 !important;
         visibility: visible !important;
         transform: none !important;
-        padding-top: 20px !important;
-        padding-bottom: 20px !important;
+    }
+
+    .masonry-gallery-section {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .masonry-gallery-section .gallery-title-container,
+    .masonry-gallery-section .container.text-center {
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .masonry-gallery-section .gallery-title-container .eyebrow,
+    .masonry-gallery-section .container.text-center .eyebrow {
+        margin-bottom: 6px !important;
+    }
+
+    .masonry-gallery-section .gallery-title-container .section-title,
+    .masonry-gallery-section .container.text-center .section-title {
+        margin-bottom: 12px !important;
+    }
+
+    .masonry-gallery-section .gallery-filter-container,
+    .masonry-gallery-section .container:has(.product-filter-wrapper) {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .masonry-gallery-section .gallery-filter-container .product-filter-wrapper,
+    .masonry-gallery-section .product-filter-wrapper {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        margin-bottom: 25px !important;
     }
 
     .masonry-grid {
