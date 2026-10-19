@@ -2932,7 +2932,7 @@ section { margin-bottom: 20px; }
 .media-frame-wrapper {
     position: relative;
     border-radius: 24px;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0 25px 50px -10px rgba(8, 120, 201, 0.28), 0 15px 30px rgba(0, 0, 0, 0.18);
     background: #000000;
     z-index: 2;
@@ -2946,6 +2946,7 @@ section { margin-bottom: 20px; }
     object-fit: cover;
     display: block;
     border-radius: 24px;
+    overflow: hidden;
 }
 
 .showcase-live-pill {
@@ -2980,8 +2981,8 @@ section { margin-bottom: 20px; }
 
 .floating-exp-card {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: -15px;
+    right: -10px;
     background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
