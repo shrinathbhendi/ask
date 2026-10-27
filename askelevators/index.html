@@ -15,7 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/hero-update.css">
+    <link rel="stylesheet" href="css/hero-update.css?v=7">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
@@ -28,16 +29,14 @@
                         <span class="tb-divider">|</span>
                         <span class="tb-phone">+91 9960000228</span>
                     </div>
-                    <div class="top-bar-right" style="display: flex; gap: 15px; align-items: center;">
-                        <a href="#" style="color: white; transition: color 0.3s; display: flex;" aria-label="Facebook"
-                            onmouseover="this.style.color='var(--ask-red)'" onmouseout="this.style.color='white'">
+                    <div class="top-bar-right">
+                        <a href="#" class="tb-social-link" aria-label="Facebook">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                             </svg>
                         </a>
-                        <a href="#" style="color: white; transition: color 0.3s; display: flex;" aria-label="Instagram"
-                            onmouseover="this.style.color='var(--ask-red)'" onmouseout="this.style.color='white'">
+                        <a href="#" class="tb-social-link" aria-label="Instagram">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -45,7 +44,6 @@
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
-
                     </div>
                 </div>
                 <div class="tb-marquee-content" aria-hidden="true">
@@ -54,16 +52,14 @@
                         <span class="tb-divider">|</span>
                         <span class="tb-phone">+91 9960000228</span>
                     </div>
-                    <div class="top-bar-right" style="display: flex; gap: 15px; align-items: center;">
-                        <a href="#" style="color: white; transition: color 0.3s; display: flex;" aria-label="Facebook"
-                            onmouseover="this.style.color='var(--ask-red)'" onmouseout="this.style.color='white'">
+                    <div class="top-bar-right">
+                        <a href="#" class="tb-social-link" aria-label="Facebook">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                             </svg>
                         </a>
-                        <a href="#" style="color: white; transition: color 0.3s; display: flex;" aria-label="Instagram"
-                            onmouseover="this.style.color='var(--ask-red)'" onmouseout="this.style.color='white'">
+                        <a href="#" class="tb-social-link" aria-label="Instagram">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -71,6 +67,7 @@
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
+                    </div>
 
                     </div>
                 </div>
@@ -98,21 +95,41 @@
     </header>
 
     <main>
-        <!-- NEW HERO SECTION WITH HERO11.PNG BACKGROUND -->
+        <!-- NEW HERO SECTION WITH HERO BACKGROUND SLIDESHOW -->
         <section class="hero-new">
+            <!-- Background Image Slides (hero11.png, hero12.png, hero14.png, hero.png, hero15.png) -->
+            <div class="hero-bg-slider" id="heroBgSlider">
+                <div class="hero-bg-slide active hero-slide-1"></div>
+                <div class="hero-bg-slide hero-slide-2"></div>
+                <div class="hero-bg-slide hero-slide-3"></div>
+                <div class="hero-bg-slide hero-slide-4"></div>
+                <div class="hero-bg-slide hero-slide-5"></div>
+            </div>
+            <div class="hero-bg-overlay"></div>
+
             <div class="hero-new-container">
-                <div class="hero-new-left">
+                <div class="hero-new-center">
                     <div class="hero-subtitle-wrapper">
                         <div class="subtitle-line"></div>
                         <span class="hero-subtitle">Welcome To ASK Elevators</span>
+                        <div class="subtitle-line"></div>
                     </div>
-                    <h1 class="hero-title" style="font-size: 60px; line-height: 1.15; margin-bottom: 20px;">
-                        Providing Advanced Range of<br>
-                        <span class="highlight-color" style="font-weight: 800;">Elevators</span>
+                    <h1 class="hero-title">
+                        Providing Advanced<br>
+                        Range of <span class="hero-highlight-wrap"><span class="highlight-color">Elevators</span></span>
                     </h1>
                     <p class="hero-desc">Delivering advanced engineering, unparalleled safety, and flawless
                         transportation solutions for every space.</p>
                 </div>
+            </div>
+
+            <!-- Slide Navigation Dots -->
+            <div class="hero-slider-dots" id="heroSliderDots">
+                <button class="hero-dot active" aria-label="Slide 1" data-slide="0"></button>
+                <button class="hero-dot" aria-label="Slide 2" data-slide="1"></button>
+                <button class="hero-dot" aria-label="Slide 3" data-slide="2"></button>
+                <button class="hero-dot" aria-label="Slide 4" data-slide="3"></button>
+                <button class="hero-dot" aria-label="Slide 5" data-slide="4"></button>
             </div>
         </section>
 
@@ -135,7 +152,7 @@
                     <p class="about-text">Our spacious infrastructure is equipped with advanced machinery, and our
                         processes are systematically divided into departments handled by experienced managers. We are
                         dedicated to providing reliable vertical mobility tailored to your requirements.</p>
-                    <a href="about.html" class="btn btn-primary" style="margin-top: 16px;">Learn More</a>
+                    <a href="about.html" class="btn btn-primary about-learn-btn">Learn More</a>
                 </div>
             </div>
         </section>
@@ -163,8 +180,7 @@
 
                     <!-- Card 2 -->
                     <div class="top-feature-card">
-                        <div class="top-feature-icon-circle"
-                            style="background: linear-gradient(135deg, #0878C9, #075A9A); box-shadow: 0 8px 24px rgba(8, 120, 201, 0.35);">
+                        <div class="top-feature-icon-circle icon-circle-blue">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10" />
@@ -178,8 +194,7 @@
 
                     <!-- Card 3 -->
                     <div class="top-feature-card">
-                        <div class="top-feature-icon-circle"
-                            style="background: linear-gradient(135deg, #1C2430, #2C384A); box-shadow: 0 8px 24px rgba(28, 36, 48, 0.35);">
+                        <div class="top-feature-icon-circle icon-circle-dark">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
@@ -402,8 +417,7 @@
 
                 <!-- Product 9 -->
                 <div class="product-grid-card">
-                    <span class="product-badge-pill"
-                        style="background: linear-gradient(135deg, #0284c7, #075a9a);">Luxury</span>
+                    <span class="product-badge-pill badge-luxury">Luxury</span>
                     <div class="product-card-img-container">
                         <img src="assets/images/products/prod_hotel_landing.jpeg"
                             alt="Hotel & Commercial Landing Lifts">
@@ -419,8 +433,7 @@
 
                 <!-- Product 10 -->
                 <div class="product-grid-card">
-                    <span class="product-badge-pill"
-                        style="background: linear-gradient(135deg, #ed1c24, #b91c1c);">Heavy Duty</span>
+                    <span class="product-badge-pill badge-heavy">Heavy Duty</span>
                     <div class="product-card-img-container">
                         <img src="assets/images/products/prod_mall_escalator.jpeg" alt="Commercial Mall Escalators">
                     </div>
@@ -436,9 +449,8 @@
             </div>
 
             <!-- Single View All Products Button -->
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="products.html" class="get-quote-btn"
-                    style="padding: 14px 42px !important; font-size: 15px; letter-spacing: 0.5px; text-transform: uppercase;">VIEW
+            <div class="text-center products-cta-wrap">
+                <a href="products.html" class="get-quote-btn btn-view-all-products">VIEW
                     ALL PRODUCTS</a>
             </div>
         </section>
@@ -590,9 +602,8 @@
 
             </div>
 
-            <div class="text-center" style="margin-top: 45px;">
-                <a href="gallery.html" class="btn btn-primary"
-                    style="padding: 14px 32px; font-size: 15px; font-weight: 600; border-radius: 30px;">
+            <div class="text-center gallery-cta-wrap">
+                <a href="gallery.html" class="btn btn-primary btn-view-gallery">
                     View All 30+ Photos in Gallery &rarr;
                 </a>
             </div>
@@ -726,24 +737,20 @@
                         <!-- Card 1 -->
                         <div class="testi-card-premium">
                             <div class="quote-icon">"</div>
-                            <div style="color: var(--ask-red); margin-bottom: 25px;">
+                            <div class="testi-quote-wrap quote-red">
                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M14.017 21v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10zm-14 0v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10z" />
                                 </svg>
                             </div>
-                            <p
-                                style="font-size: 16px; line-height: 1.8; margin-bottom: 35px; color: rgba(255,255,255,0.85);">
+                            <p class="testi-quote-text">
                                 We are satisfied with the services provided by ASK Elevators. Their support and response
                                 have been good.</p>
-                            <div style="display: flex; align-items: center; gap: 20px;">
-                                <div class="testi-avatar"
-                                    style="background: linear-gradient(135deg, var(--ask-blue), #1a7bb5);">DP</div>
+                            <div class="testi-author-row">
+                                <div class="testi-avatar avatar-blue">DP</div>
                                 <div>
-                                    <h4 style="margin: 0 0 6px 0; color: white; font-size: 18px; font-weight: 700;">Dr.
-                                        Patil</h4>
-                                    <span
-                                        style="font-size: 13px; color: var(--ask-red); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">Doctor</span>
+                                    <h4 class="testi-author-name">Dr. Patil</h4>
+                                    <span class="testi-author-role role-red">Doctor</span>
                                 </div>
                             </div>
                         </div>
@@ -751,25 +758,20 @@
                         <!-- Card 2 -->
                         <div class="testi-card-premium">
                             <div class="quote-icon">"</div>
-                            <div style="color: var(--ask-blue); margin-bottom: 25px;">
+                            <div class="testi-quote-wrap quote-blue">
                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M14.017 21v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10zm-14 0v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10z" />
                                 </svg>
                             </div>
-                            <p
-                                style="font-size: 16px; line-height: 1.8; margin-bottom: 35px; color: rgba(255,255,255,0.85);">
+                            <p class="testi-quote-text">
                                 Excellent service and timely support. We appreciate their professional approach and
                                 commitment.</p>
-                            <div style="display: flex; align-items: center; gap: 20px;">
-                                <div class="testi-avatar"
-                                    style="background: linear-gradient(135deg, var(--ask-red), #d62d2d);">MK</div>
+                            <div class="testi-author-row">
+                                <div class="testi-avatar avatar-red">MK</div>
                                 <div>
-                                    <h4 style="margin: 0 0 6px 0; color: white; font-size: 18px; font-weight: 700;">Mr.
-                                        Kadam</h4>
-                                    <span
-                                        style="font-size: 13px; color: var(--ask-blue); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">Society
-                                        Chairman</span>
+                                    <h4 class="testi-author-name">Mr. Kadam</h4>
+                                    <span class="testi-author-role role-blue">Society Chairman</span>
                                 </div>
                             </div>
                         </div>
@@ -777,23 +779,19 @@
                         <!-- Card 3 -->
                         <div class="testi-card-premium">
                             <div class="quote-icon">"</div>
-                            <div style="color: var(--ask-red); margin-bottom: 25px;">
+                            <div class="testi-quote-wrap quote-red">
                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M14.017 21v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10zm-14 0v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10z" />
                                 </svg>
                             </div>
-                            <p
-                                style="font-size: 16px; line-height: 1.8; margin-bottom: 35px; color: rgba(255,255,255,0.85);">
+                            <p class="testi-quote-text">
                                 Reliable and professional team. Their elevator solutions have met our expectations.</p>
-                            <div style="display: flex; align-items: center; gap: 20px;">
-                                <div class="testi-avatar" style="background: linear-gradient(135deg, #111, #333);">MM
-                                </div>
+                            <div class="testi-author-row">
+                                <div class="testi-avatar avatar-dark">MM</div>
                                 <div>
-                                    <h4 style="margin: 0 0 6px 0; color: white; font-size: 18px; font-weight: 700;">Mr.
-                                        Mohol</h4>
-                                    <span
-                                        style="font-size: 13px; color: var(--ask-red); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">Developer</span>
+                                    <h4 class="testi-author-name">Mr. Mohol</h4>
+                                    <span class="testi-author-role role-red">Developer</span>
                                 </div>
                             </div>
                         </div>
@@ -801,24 +799,20 @@
                         <!-- Card 4 -->
                         <div class="testi-card-premium">
                             <div class="quote-icon">"</div>
-                            <div style="color: var(--ask-blue); margin-bottom: 25px;">
+                            <div class="testi-quote-wrap quote-blue">
                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M14.017 21v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10zm-14 0v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10z" />
                                 </svg>
                             </div>
-                            <p
-                                style="font-size: 16px; line-height: 1.8; margin-bottom: 35px; color: rgba(255,255,255,0.85);">
+                            <p class="testi-quote-text">
                                 Modern design and robust safety mechanisms. ASK Elevators provided a seamless
                                 installation for our residential complex.</p>
-                            <div style="display: flex; align-items: center; gap: 20px;">
-                                <div class="testi-avatar"
-                                    style="background: linear-gradient(135deg, var(--ask-blue), #0d5f96);">RS</div>
+                            <div class="testi-author-row">
+                                <div class="testi-avatar avatar-blue-dark">RS</div>
                                 <div>
-                                    <h4 style="margin: 0 0 6px 0; color: white; font-size: 18px; font-weight: 700;">Mr.
-                                        Shinde</h4>
-                                    <span
-                                        style="font-size: 13px; color: var(--ask-red); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">Architect</span>
+                                    <h4 class="testi-author-name">Mr. Shinde</h4>
+                                    <span class="testi-author-role role-red">Architect</span>
                                 </div>
                             </div>
                         </div>
@@ -826,25 +820,20 @@
                         <!-- Card 5 -->
                         <div class="testi-card-premium">
                             <div class="quote-icon">"</div>
-                            <div style="color: var(--ask-red); margin-bottom: 25px;">
+                            <div class="testi-quote-wrap quote-red">
                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M14.017 21v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10zm-14 0v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10z" />
                                 </svg>
                             </div>
-                            <p
-                                style="font-size: 16px; line-height: 1.8; margin-bottom: 35px; color: rgba(255,255,255,0.85);">
+                            <p class="testi-quote-text">
                                 Prompt AMC service and smooth response times whenever needed. Highly recommended for
                                 commercial buildings.</p>
-                            <div style="display: flex; align-items: center; gap: 20px;">
-                                <div class="testi-avatar"
-                                    style="background: linear-gradient(135deg, var(--ask-red), #b52020);">AD</div>
+                            <div class="testi-author-row">
+                                <div class="testi-avatar avatar-red-dark">AD</div>
                                 <div>
-                                    <h4 style="margin: 0 0 6px 0; color: white; font-size: 18px; font-weight: 700;">Mrs.
-                                        Deshmukh</h4>
-                                    <span
-                                        style="font-size: 13px; color: var(--ask-blue); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">Property
-                                        Owner</span>
+                                    <h4 class="testi-author-name">Mrs. Deshmukh</h4>
+                                    <span class="testi-author-role role-blue">Property Owner</span>
                                 </div>
                             </div>
                         </div>
@@ -852,24 +841,20 @@
                         <!-- Card 6 -->
                         <div class="testi-card-premium">
                             <div class="quote-icon">"</div>
-                            <div style="color: var(--ask-blue); margin-bottom: 25px;">
+                            <div class="testi-quote-wrap quote-blue">
                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M14.017 21v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10zm-14 0v-7.391c0-5.714 4.14-10.36 10-11.609v3.424c-3.136 1.055-5.241 3.551-5.241 6.576h5.241v9h-10z" />
                                 </svg>
                             </div>
-                            <p
-                                style="font-size: 16px; line-height: 1.8; margin-bottom: 35px; color: rgba(255,255,255,0.85);">
+                            <p class="testi-quote-text">
                                 High build quality, quiet elevator motors, and elegant cabin interior. Great work by the
                                 entire ASK team.</p>
-                            <div style="display: flex; align-items: center; gap: 20px;">
-                                <div class="testi-avatar" style="background: linear-gradient(135deg, #111, #444);">SK
-                                </div>
+                            <div class="testi-author-row">
+                                <div class="testi-avatar avatar-slate">SK</div>
                                 <div>
-                                    <h4 style="margin: 0 0 6px 0; color: white; font-size: 18px; font-weight: 700;">Mr.
-                                        Kulkarni</h4>
-                                    <span
-                                        style="font-size: 13px; color: var(--ask-red); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">Builder</span>
+                                    <h4 class="testi-author-name">Mr. Kulkarni</h4>
+                                    <span class="testi-author-role role-red">Builder</span>
                                 </div>
                             </div>
                         </div>
@@ -886,8 +871,8 @@
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-brand">
-                        <img src="assets/images/logo11.png" alt="ASK Elevators Logo" style="height: 68px; margin-bottom: 16px; background: #ffffff; padding: 6px 10px; border-radius: 12px; display: inline-block;">
-                        <p style="margin-bottom: 20px;">Providing premium elevator solutions and AMC services in Pune,
+                        <img src="assets/images/logo11.png" alt="ASK Elevators Logo" class="footer-logo-img">
+                        <p class="footer-desc-text">Providing premium elevator solutions and AMC services in Pune,
                             built
                             on safety, quality, and trust.</p>
                         <div class="footer-contact">
@@ -978,6 +963,13 @@
                                 <a href="mailto:sbhalerao6728@gmail.com">sbhalerao6728@gmail.com</a>
                             </li>
                         </ul>
+                        <div class="footer-map-box">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.6448264250575!2d73.81385877470599!3d18.43881117166758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295f7e015180b%3A0x8e78a09d4c349c82!2sKrupasindhu%20apartment!5e1!3m2!1sen!2sin!4v1792648341815!5m2!1sen!2sin"
+                                class="footer-map-iframe" allowfullscreen="" loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
 

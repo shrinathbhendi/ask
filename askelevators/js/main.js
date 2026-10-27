@@ -173,46 +173,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 6. HERO SLIDER ---
-    const heroSlides = document.querySelectorAll('.hero-slide');
-    const heroPrev = document.getElementById('heroPrev');
-    const heroNext = document.getElementById('heroNext');
-    let currentHeroSlide = 0;
-    let heroSlideInterval;
+    // --- 6. HERO BACKGROUND SLIDESHOW ---
+    const bgSlides = document.querySelectorAll('.hero-bg-slide');
+    const bgDots = document.querySelectorAll('.hero-dot');
+    let currentBgSlide = 0;
+    let bgSlideInterval;
 
-    if (heroSlides.length > 0) {
-        function showHeroSlide(index) {
-            heroSlides.forEach(slide => slide.classList.remove('active'));
-            heroSlides[index].classList.add('active');
-        }
-
-        function nextHeroSlide() {
-            currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-            showHeroSlide(currentHeroSlide);
-        }
-
-        function prevHeroSlide() {
-            currentHeroSlide = (currentHeroSlide - 1 + heroSlides.length) % heroSlides.length;
-            showHeroSlide(currentHeroSlide);
-        }
-
-        if (heroNext && heroPrev) {
-            heroNext.addEventListener('click', () => {
-                nextHeroSlide();
-                resetHeroInterval();
+    if (bgSlides.length > 0) {
+        function showBgSlide(index) {
+            bgSlides.forEach((slide, idx) => {
+                slide.classList.toggle('active', idx === index);
             });
-            heroPrev.addEventListener('click', () => {
-                prevHeroSlide();
-                resetHeroInterval();
+            bgDots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === index);
             });
+            currentBgSlide = index;
         }
 
-        function resetHeroInterval() {
-            clearInterval(heroSlideInterval);
-            heroSlideInterval = setInterval(nextHeroSlide, 8000);
+        function nextBgSlide() {
+            const nextIdx = (currentBgSlide + 1) % bgSlides.length;
+            showBgSlide(nextIdx);
         }
 
-        resetHeroInterval();
+        function resetBgInterval() {
+            clearInterval(bgSlideInterval);
+            bgSlideInterval = setInterval(nextBgSlide, 2000); // Change photo every 2 seconds
+        }
+
+        bgDots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                showBgSlide(idx);
+                resetBgInterval();
+            });
+        });
+
+        resetBgInterval();
     }
 
     // --- 7. PRODUCT CAROUSEL (2-CARDS STEP SLIDER) ---

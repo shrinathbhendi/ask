@@ -2029,6 +2029,30 @@ a {
     padding-left: 0 !important;
 }
 
+.footer-map-box {
+    margin-top: 14px;
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-map-box:hover {
+    border-color: rgba(2, 132, 199, 0.7);
+    box-shadow: 0 4px 16px rgba(2, 132, 199, 0.25);
+}
+
+.footer-map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 24px;
@@ -2752,7 +2776,7 @@ section.products.reveal.active,
 /* =========================================
    MASONRY GALLERY & LIGHTBOX
 ========================================= */
-.masonry-gallery-section { padding: 90px 0; background-color: var(--white); }
+.masonry-gallery-section { padding: 55px 0 90px; background-color: var(--white); }
 .masonry-grid { column-count: 3; column-gap: 24px; }
 @media (max-width: 991px) { .masonry-grid { column-count: 2; } }
 @media (max-width: 768px) { .masonry-grid { column-count: 1; } }

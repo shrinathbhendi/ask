@@ -1,0 +1,36 @@
+/**
+ * ASK ELEVATORS - PRODUCTS FILTER JS
+ */
+document.addEventListener('DOMContentLoaded', function () {
+    const filterLinks = document.querySelectorAll('#product-filter a');
+    const productCards = document.querySelectorAll('#product-grid .product-card');
+
+    if (!filterLinks.length || !productCards.length) return;
+
+    filterLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Remove active class from all filter links
+            filterLinks.forEach(l => l.classList.remove('active'));
+
+            // Add active class to clicked link
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            // Filter product cards based on category
+            productCards.forEach(card => {
+                if (filterValue === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});

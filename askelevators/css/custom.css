@@ -1,0 +1,183 @@
+/* ==========================================================================
+   ASK ELEVATORS - CUSTOM STYLES (EXTRACTED FROM INLINE HTML)
+   ========================================================================== */
+
+/* --- Top Bar Social & Contact Links --- */
+.top-bar-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.tb-social-link {
+    color: #ffffff;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tb-social-link:hover {
+    color: var(--ask-red, #ED1C24);
+}
+
+/* --- Hero Background Slides --- */
+.hero-bg-slide.hero-slide-1 {
+    background-image: url('../assets/images/hero11.png');
+}
+
+.hero-bg-slide.hero-slide-2 {
+    background-image: url('../assets/images/hero12.png');
+}
+
+.hero-bg-slide.hero-slide-3 {
+    background-image: url('../assets/images/hero14.png');
+}
+
+.hero-bg-slide.hero-slide-4 {
+    background-image: url('../assets/images/hero.png');
+}
+
+.hero-bg-slide.hero-slide-5 {
+    background-image: url('../assets/images/hero15.png');
+}
+
+/* --- About Section Button --- */
+.about-learn-btn {
+    margin-top: 16px;
+}
+
+/* --- Top Feature Cards Icon Colors --- */
+.top-feature-icon-circle.icon-circle-blue {
+    background: linear-gradient(135deg, #0878C9, #075A9A);
+    box-shadow: 0 8px 24px rgba(8, 120, 201, 0.35);
+}
+
+.top-feature-icon-circle.icon-circle-dark {
+    background: linear-gradient(135deg, #1C2430, #2C384A);
+    box-shadow: 0 8px 24px rgba(28, 36, 48, 0.35);
+}
+
+/* --- Product Grid Pills & Badges --- */
+.product-badge-pill.badge-luxury {
+    background: linear-gradient(135deg, #0284c7, #075a9a);
+}
+
+.product-badge-pill.badge-heavy {
+    background: linear-gradient(135deg, #ed1c24, #b91c1c);
+}
+
+/* --- Section CTAs & Buttons --- */
+.products-cta-wrap {
+    margin-top: 50px;
+}
+
+.btn-view-all-products {
+    padding: 14px 42px !important;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.gallery-cta-wrap {
+    margin-top: 45px;
+}
+
+.btn-view-gallery {
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+/* --- Testimonials Section Styling --- */
+.testi-quote-wrap {
+    margin-bottom: 25px;
+}
+
+.testi-quote-wrap.quote-red {
+    color: var(--ask-red, #ED1C24);
+}
+
+.testi-quote-wrap.quote-blue {
+    color: var(--ask-blue, #0878C9);
+}
+
+.testi-quote-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.testi-author-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.testi-avatar.avatar-blue {
+    background: linear-gradient(135deg, var(--ask-blue, #0878C9), #1a7bb5);
+}
+
+.testi-avatar.avatar-red {
+    background: linear-gradient(135deg, var(--ask-red, #ED1C24), #d62d2d);
+}
+
+.testi-avatar.avatar-dark {
+    background: linear-gradient(135deg, #111111, #333333);
+}
+
+.testi-avatar.avatar-blue-dark {
+    background: linear-gradient(135deg, var(--ask-blue, #0878C9), #0d5f96);
+}
+
+.testi-avatar.avatar-red-dark {
+    background: linear-gradient(135deg, var(--ask-red, #ED1C24), #b52020);
+}
+
+.testi-avatar.avatar-slate {
+    background: linear-gradient(135deg, #111111, #444444);
+}
+
+.testi-author-name {
+    margin: 0 0 6px 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.testi-author-role {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.testi-author-role.role-red {
+    color: var(--ask-red, #ED1C24);
+}
+
+.testi-author-role.role-blue {
+    color: var(--ask-blue, #0878C9);
+}
+
+/* --- Footer Brand & Map --- */
+.footer-logo-img {
+    height: 68px;
+    margin-bottom: 16px;
+    background: #ffffff;
+    padding: 6px 10px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.footer-desc-text {
+    margin-bottom: 20px;
+}
+
+.footer-map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
