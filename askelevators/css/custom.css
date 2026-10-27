@@ -181,3 +181,395 @@
     height: 100%;
     border: 0;
 }
+
+/* ==========================================================================
+   PINTEREST-STYLE GALLERY SHOWCASE DESIGN
+   ========================================================================== */
+
+/* --- 1. Gallery Section & Pinterest Container --- */
+.masonry-gallery-section {
+    padding: 45px 0 95px !important;
+    background-color: #FAFAFA !important;
+}
+
+.masonry-gallery-section .container {
+    max-width: 1540px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 0 16px !important;
+}
+
+.masonry-gallery-section .gallery-title-container {
+    margin-bottom: 25px !important;
+}
+
+.masonry-gallery-section .gallery-title-container .eyebrow {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ask-red, #ED1C24);
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.masonry-gallery-section .gallery-title-container .section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(28px, 3.2vw, 42px);
+    font-weight: 800;
+    color: #0F172A;
+    letter-spacing: -0.5px;
+}
+
+/* --- 2. Pinterest Explore/Filter Pills --- */
+.product-filter-wrapper {
+    margin: 10px auto 35px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    overflow: visible !important;
+}
+
+.product-horizontal-filter {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+.product-horizontal-filter li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.product-horizontal-filter li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 9px 20px !important;
+    border-radius: 9999px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: #334155 !important;
+    background: #F1F5F9 !important;
+    border: 1px solid rgba(226, 232, 240, 0.9) !important;
+    transition: all 0.22s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    white-space: nowrap !important;
+}
+
+.product-horizontal-filter li a:hover {
+    background: #E2E8F0 !important;
+    color: #0F172A !important;
+    transform: translateY(-1px) !important;
+}
+
+.product-horizontal-filter li a.active {
+    background: #0F172A !important;
+    color: #FFFFFF !important;
+    border-color: #0F172A !important;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.22) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* --- 3. Pinterest Waterfall Grid (Multi-Column Masonry) --- */
+.masonry-grid {
+    display: block !important;
+    column-count: 4 !important;
+    column-gap: 18px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+@media (min-width: 1560px) {
+    .masonry-grid {
+        column-count: 5 !important;
+        column-gap: 20px !important;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 860px) {
+    .masonry-grid {
+        column-count: 3 !important;
+        column-gap: 16px !important;
+    }
+}
+
+@media (max-width: 859px) and (min-width: 580px) {
+    .masonry-grid {
+        column-count: 2 !important;
+        column-gap: 14px !important;
+    }
+}
+
+@media (max-width: 579px) {
+    .masonry-grid {
+        column-count: 2 !important; /* Pinterest signature 2-column mobile experience */
+        column-gap: 10px !important;
+    }
+}
+
+/* --- 4. Pinterest Pin Cards (.masonry-item) --- */
+.masonry-item {
+    break-inside: avoid !important;
+    display: inline-block !important;
+    width: 100% !important;
+    margin-bottom: 18px !important;
+    position: relative !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    background-color: #E2E8F0 !important;
+    cursor: zoom-in !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.28s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.28s ease !important;
+    transform: translateZ(0) !important;
+}
+
+.masonry-item:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.15) !important;
+}
+
+/* Image inside Pin */
+.masonry-item img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: block !important;
+    object-fit: cover !important;
+    border-radius: 18px !important;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.masonry-item:hover img {
+    transform: scale(1.025) !important;
+}
+
+/* --- 5. Pinterest Hover Actions Overlay --- */
+.masonry-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(15, 23, 42, 0.32) !important;
+    border-radius: 18px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: none !important;
+    transition: opacity 0.22s ease-in-out, visibility 0.22s ease-in-out !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+}
+
+.masonry-item:hover .masonry-overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+/* Pinterest Red Action Button (Top-Right) */
+.masonry-overlay::before {
+    content: 'Enquire' !important;
+    position: absolute !important;
+    top: 14px !important;
+    right: 14px !important;
+    background: var(--ask-red, #ED1C24) !important;
+    color: #FFFFFF !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    padding: 7px 15px !important;
+    border-radius: 50px !important;
+    box-shadow: 0 4px 12px rgba(237, 28, 36, 0.45) !important;
+    transition: all 0.2s ease !important;
+    pointer-events: auto !important;
+    z-index: 3 !important;
+}
+
+.masonry-overlay:hover::before {
+    background: #C81018 !important;
+    transform: scale(1.05) !important;
+}
+
+/* Category Badge (Top-Left) */
+.masonry-overlay .gallery-cat-badge {
+    align-self: flex-start !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    color: #0F172A !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.6px !important;
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16) !important;
+    margin-bottom: 0 !important;
+    position: relative !important;
+    z-index: 3 !important;
+}
+
+/* Bottom Glass Container inside Overlay */
+.masonry-overlay h4,
+.masonry-overlay p,
+.masonry-overlay .zoom-btn {
+    position: relative !important;
+    z-index: 3 !important;
+}
+
+.masonry-overlay h4 {
+    font-family: 'Outfit', sans-serif !important;
+    color: #FFFFFF !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    margin: auto 0 4px 0 !important;
+    line-height: 1.3 !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.75) !important;
+}
+
+.masonry-overlay p {
+    color: rgba(255, 255, 255, 0.92) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    margin: 0 0 10px 0 !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+/* Pinterest Floating Zoom Button (Bottom-Right/Row) */
+.masonry-overlay .zoom-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    align-self: flex-start !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    color: #0F172A !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    padding: 7px 14px !important;
+    border-radius: 30px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22) !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.masonry-overlay .zoom-btn:hover {
+    background: #FFFFFF !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Subtle Dark Bottom Scrim on hover to keep text ultra-crisp */
+.masonry-overlay::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: 70% !important;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.5) 60%, transparent 100%) !important;
+    border-radius: 0 0 18px 18px !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+/* --- 6. Mobile Pinterest Refinements (< 768px) --- */
+@media (max-width: 767px) {
+    .masonry-gallery-section {
+        padding: 25px 0 60px !important;
+    }
+
+    .masonry-gallery-section .container {
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    .product-filter-wrapper {
+        margin-bottom: 20px !important;
+        overflow-x: auto !important;
+        justify-content: flex-start !important;
+        padding-bottom: 8px !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+    }
+
+    .product-filter-wrapper::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .product-horizontal-filter {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        gap: 8px !important;
+        padding: 0 4px !important;
+    }
+
+    .product-horizontal-filter li a {
+        padding: 7px 15px !important;
+        font-size: 12.5px !important;
+    }
+
+    .masonry-item {
+        border-radius: 12px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .masonry-item img {
+        border-radius: 12px !important;
+    }
+
+    .masonry-overlay {
+        border-radius: 12px !important;
+        padding: 10px !important;
+    }
+
+    .masonry-overlay::before {
+        top: 8px !important;
+        right: 8px !important;
+        font-size: 10px !important;
+        padding: 4px 10px !important;
+    }
+
+    .masonry-overlay .gallery-cat-badge {
+        font-size: 9px !important;
+        padding: 4px 8px !important;
+    }
+
+    .masonry-overlay h4 {
+        font-size: 12px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .masonry-overlay p {
+        display: none !important; /* Hide long text on mobile pins to keep feed clean */
+    }
+
+    .masonry-overlay .zoom-btn {
+        padding: 4px 10px !important;
+        font-size: 9.5px !important;
+    }
+}

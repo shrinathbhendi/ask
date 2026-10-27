@@ -3830,13 +3830,13 @@ header.new-navbar.scrolled,
         margin-bottom: 25px !important;
     }
 
+    /* PINTEREST MASONRY MOBILE (2-COLUMN STAGGERED PIN WATERFALL) */
     .masonry-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 16px !important;
-        margin-top: 20px !important;
+        display: block !important;
+        column-count: 2 !important;
+        column-gap: 12px !important;
+        margin-top: 15px !important;
         width: 100% !important;
-        column-count: 1 !important;
         box-sizing: border-box !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -3852,16 +3852,16 @@ header.new-navbar.scrolled,
     .masonry-item.tall {
         grid-column: auto !important;
         grid-row: auto !important;
-        display: block !important;
+        display: inline-block !important;
         position: relative !important;
         overflow: hidden !important;
         width: 100% !important;
         height: auto !important;
-        min-height: 260px !important;
-        border-radius: 16px !important;
+        min-height: 0 !important;
+        border-radius: 14px !important;
         box-sizing: border-box !important;
-        margin-bottom: 0 !important;
-        break-inside: auto !important;
+        margin-bottom: 12px !important;
+        break-inside: avoid !important;
         opacity: 1 !important;
         visibility: visible !important;
         transform: none !important;
@@ -3869,9 +3869,10 @@ header.new-navbar.scrolled,
 
     .masonry-item img {
         width: 100% !important;
-        height: 260px !important;
+        height: auto !important;
+        min-height: 0 !important;
         object-fit: cover !important;
-        border-radius: 16px !important;
+        border-radius: 14px !important;
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
