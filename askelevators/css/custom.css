@@ -42,6 +42,10 @@
     background-image: url('../assets/images/hero15.png');
 }
 
+.hero-bg-slide.hero-slide-6 {
+    background-image: url('../assets/images/hero21.png');
+}
+
 /* --- About Section Button --- */
 .about-learn-btn {
     margin-top: 16px;
