@@ -3946,7 +3946,8 @@ header:not(.new-navbar),
 .hero-products,
 .hero-gallery,
 .hero-contact,
-.hero-passenger {
+.hero-passenger,
+.hero-parking {
     min-height: 410px !important;
     height: 46vh !important;
     max-height: 460px !important;
@@ -3998,7 +3999,8 @@ header:not(.new-navbar),
     .hero-products,
     .hero-gallery,
     .hero-contact,
-    .hero-passenger {
+    .hero-passenger,
+    .hero-parking {
         min-height: 330px !important;
         height: auto !important;
         padding-top: 140px !important;

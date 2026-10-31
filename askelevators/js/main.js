@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Automatically add reveal class to all sections for animation
     document.querySelectorAll('section').forEach(sec => {
+        if (sec.classList.contains('products-section') || 
+            sec.classList.contains('product-details-section') || 
+            sec.classList.contains('products')) {
+            sec.classList.add('active');
+            return;
+        }
         if (!sec.classList.contains('reveal')) {
             sec.classList.add('reveal');
             revealOnScroll.observe(sec);
@@ -102,9 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.addEventListener('click', closeMobileMenu);
         }
 
-        // Close menu when clicking nav links
+        // Close menu when clicking regular nav links (allow dropdown toggle on mobile)
         navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
+            link.addEventListener('click', (e) => {
+                if (link.classList.contains('nav-dropdown-toggle') && window.innerWidth <= 991) {
+                    e.preventDefault();
+                    link.closest('.nav-item-dropdown').classList.toggle('mobile-open');
+                    return;
+                }
+                closeMobileMenu();
+            });
         });
     }
 

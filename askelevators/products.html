@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products & Services | ASK Elevators</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="assets/images/fevicon.png">
+    <link rel="apple-touch-icon" href="assets/images/fevicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/hero-update.css">
@@ -78,7 +79,105 @@
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About Us</a>
-                <a href="products.html" class="nav-link active">Products & Services</a>
+                <div class="nav-item-dropdown">
+                    <a href="products.html" class="nav-link nav-dropdown-toggle active">
+                        Products & Services
+                        <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="products.html#all" class="dropdown-featured" data-filter="all">
+                            <div class="nav-dropdown-icon">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            </div>
+                            <span>All Products & Services</span>
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <div class="nav-dropdown-grid">
+                            <div class="nav-dropdown-col">
+                                <a href="products.html#passenger" data-filter="passenger">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                                    </div>
+                                    <span>Passenger Lifts</span>
+                                </a>
+                                <a href="products.html#mrl" data-filter="mrl">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                                    </div>
+                                    <span>M.R.L Elevators</span>
+                                </a>
+                                <a href="products.html#residential" data-filter="residential">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                                    </div>
+                                    <span>Residential Lifts</span>
+                                </a>
+                                <a href="products.html#hydraulic" data-filter="hydraulic">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                    </div>
+                                    <span>Hydraulic Lifts</span>
+                                </a>
+                                <a href="products.html#goods" data-filter="goods">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                                    </div>
+                                    <span>Goods Lifts</span>
+                                </a>
+                                <a href="products.html#hospital" data-filter="hospital">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                                    </div>
+                                    <span>Hospital Stretcher</span>
+                                </a>
+                            </div>
+                            <div class="nav-dropdown-col">
+                                <a href="products.html#parking" data-filter="parking">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 17V7h4a3 3 0 0 1 0 6H7"/></svg>
+                                    </div>
+                                    <span>Car Parking System</span>
+                                </a>
+                                <a href="products.html#escalators" data-filter="escalators">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h4l5-6h7"/></svg>
+                                    </div>
+                                    <span>Escalators</span>
+                                </a>
+                                <a href="products.html#dumbwaiter" data-filter="dumbwaiter">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18"/></svg>
+                                    </div>
+                                    <span>Dumb Waiter</span>
+                                </a>
+                                <a href="products.html#service" data-filter="service">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                    </div>
+                                    <span>Lift Service</span>
+                                </a>
+                                <a href="products.html#modification" data-filter="modification">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                                    </div>
+                                    <span>Lift Modification</span>
+                                </a>
+                                <a href="products.html#maintenance" data-filter="maintenance">
+                                    <div class="nav-dropdown-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    </div>
+                                    <span>Lift Maintenance</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="products.html" class="nav-dropdown-bottom-cta">
+                            <span>Browse All Products & Photo Catalog &rarr;</span>
+                        </a>
+                    </div>
+                </div>
                 <a href="gallery.html" class="nav-link">Gallery</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
@@ -105,171 +204,614 @@
             </div>
         </section>
 
-        <!-- PRODUCTS -->
-        <section class="products" style="padding: 100px 0;">
+        <!-- PRODUCTS SECTION WITH SIDEBAR & 2-PHOTO DESIGNS -->
+        <section class="products-section" style="padding: 70px 0 100px;">
             <div class="container">
-                <div class="text-center reveal">
-                    <span class="eyebrow">Our Portfolio</span>
-                    <h2 class="section-title">Elevator Solutions</h2>
-                </div>
-                
-                <!-- TOP HORIZONTAL FILTER BOXES -->
-                <div class="product-filter-wrapper reveal" style="margin-top: 35px; margin-bottom: 45px;">
-                    <ul class="product-horizontal-filter" id="product-filter">
-                        <li><a href="#" data-filter="all" class="active">All Products & Services</a></li>
-                        <li><a href="#" data-filter="passenger">Passenger Lifts</a></li>
-                        <li><a href="#" data-filter="mrl">M.R.L Lifts</a></li>
-                        <li><a href="#" data-filter="residential">Residential Lifts</a></li>
-                        <li><a href="#" data-filter="hydraulic">Hydraulic Lifts</a></li>
-                        <li><a href="#" data-filter="goods">Goods Lifts</a></li>
-                        <li><a href="#" data-filter="hospital">Hospital Stretcher</a></li>
-                        <li><a href="#" data-filter="parking">Parking Lifts</a></li>
-                        <li><a href="#" data-filter="escalators">Escalators</a></li>
-                        <li><a href="#" data-filter="dumbwaiter">Dumb Waiter</a></li>
-                        <li><a href="#" data-filter="service">Lift Service</a></li>
-                        <li><a href="#" data-filter="modification">Lift Modification</a></li>
-                        <li><a href="#" data-filter="maintenance">Lift Maintenance</a></li>
-                    </ul>
-                </div>
+                <div class="product-details-layout">
+                    <!-- SIDEBAR -->
+                    <div class="product-sidebar">
+                        <h3>Our <span style="color: var(--primary-red);">Specialization</span></h3>
+                        <ul class="sidebar-nav" id="product-filter">
+                            <li>
+                                <a href="#all" data-filter="all" class="sidebar-all-products-link active">
+                                    <span class="sidebar-nav-icon">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                                    </span>
+                                    <span>All Products & Services</span>
+                                </a>
+                            </li>
+                            <li><a href="#passenger" data-filter="passenger">Passenger Lifts</a></li>
+                            <li><a href="#mrl" data-filter="mrl">M.R.L Lifts</a></li>
+                            <li><a href="#residential" data-filter="residential">Residential Lifts</a></li>
+                            <li><a href="#hydraulic" data-filter="hydraulic">Hydraulic Lifts</a></li>
+                            <li><a href="#goods" data-filter="goods">Goods Lifts</a></li>
+                            <li><a href="#hospital" data-filter="hospital">Hospital Stretcher</a></li>
+                            <li><a href="#parking" data-filter="parking">Car Parking System</a></li>
+                            <li><a href="#escalators" data-filter="escalators">Escalators</a></li>
+                            <li><a href="#dumbwaiter" data-filter="dumbwaiter">Dumb Waiter</a></li>
+                            <li><a href="#service" data-filter="service">Lift Service</a></li>
+                            <li><a href="#modification" data-filter="modification">Lift Modification</a></li>
+                            <li><a href="#maintenance" data-filter="maintenance">Lift Maintenance</a></li>
+                        </ul>
 
-                <!-- FULL WIDTH PRODUCT GRID -->
-                <div class="product-grid" id="product-grid">
-                    
-                    <div class="product-card reveal" data-category="passenger">
-                        <div class="product-image"><img src="assets/images/gallery/gal_2.jpeg" alt="Passenger Lift"></div>
-                        <div class="product-card-body">
-                            <h3>Passenger Lifts</h3>
-                            <p>Smooth running and comfortable cabins designed for low to medium-rise buildings like hotels and offices.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
-                        </div>
-                    </div>
-                    
-                    <div class="product-card reveal" data-category="passenger">
-                        <div class="product-image"><img src="assets/images/gallery/gal_3.jpeg" alt="Capsule Lift"></div>
-                        <div class="product-card-body">
-                            <h3>Capsule Lifts</h3>
-                            <p>Architecturally stunning glass elevators that provide panoramic views and add a premium aesthetic.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
+                        <!-- Sidebar Callout -->
+                        <div class="sidebar-cta-card" style="margin-top: 24px;">
+                            <h4>Custom Lift Design?</h4>
+                            <p>Talk to our elevator engineers for tailor-made site drawings & pricing.</p>
+                            <a href="tel:+919960000228" class="sidebar-cta-btn">Call +91 9960000228</a>
                         </div>
                     </div>
 
-                    <div class="product-card reveal" data-category="mrl">
-                        <div class="product-image"><img src="assets/images/gallery/gal_6.jpeg" alt="MRL Lift"></div>
-                        <div class="product-card-body">
-                            <h3>M.R.L Lifts</h3>
-                            <p>Machine Room-Less elevators for buildings with limited space, offering great energy efficiency.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
+                    <!-- MAIN CONTENT: 2-PHOTO DESIGNS -->
+                    <div class="product-content">
+                        <!-- Top status bar -->
+                        <div class="products-grid-header">
+                            <div>
+                                <span class="products-active-category-tag" id="category-tag">Complete Collection</span>
+                                <h2 class="products-active-category-title" id="category-title">All Products & Services</h2>
+                            </div>
+                            <div class="products-count-badge" id="category-count">
+                                24 Photo Designs
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="product-card reveal" data-category="residential">
-                        <div class="product-image"><img src="assets/images/gallery/gal_1.jpeg" alt="Residential Lift"></div>
-                        <div class="product-card-body">
-                            <h3>Residential Lifts</h3>
-                            <p>Compact, trendy, and authentic designer lifts perfect for residential homes and bungalows.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
-                        </div>
-                    </div>
-                    
-                    <div class="product-card reveal" data-category="hospital">
-                        <div class="product-image"><img src="assets/images/gallery/gal_4.jpeg" alt="Hospital Lift"></div>
-                        <div class="product-card-body">
-                            <h3>Hospital Stretcher Lifts</h3>
-                            <p>Reliable and spacious vertical transportation designed specifically for the safe movement of patients.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
-                        </div>
-                    </div>
+                        <!-- 2-COLUMNS PHOTO DESIGNS GRID -->
+                        <div class="product-two-grid" id="product-grid">
+                            
+                            <!-- PASSENGER LIFTS - DESIGN 01 -->
+                            <div class="product-two-card" data-category="passenger">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_2.jpeg" alt="Passenger Lift Deluxe Cabin Design">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Passenger Lift</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Commercial & Residential</span>
+                                    <h3 class="product-two-title">Deluxe Stainless Steel & Wood Finish</h3>
+                                    <p class="product-two-desc">Engineered for smooth, jerk-free vertical transit with premium architectural hairline stainless steel, ambient warm LED ceiling panels, and precision microprocessor controls.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">4–20 Passengers</span>
+                                        <span class="product-two-spec-item">Up to 2.5 m/s</span>
+                                        <span class="product-two-spec-item">VVVF Energy Saver</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="passenger-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=passenger" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="product-card reveal" data-category="hydraulic">
-                        <div class="product-image"><img src="assets/images/gallery/gal_5.jpeg" alt="Hydraulic Lift"></div>
-                        <div class="product-card-body">
-                            <h3>Hydraulic Lifts</h3>
-                            <p>Robust lifting solutions used in manufacturing, construction, automotive, and docking applications.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
-                        </div>
-                    </div>
-                    
-                    <div class="product-card reveal" data-category="goods">
-                        <div class="product-image"><img src="assets/images/gallery/gal_10.jpeg" alt="Goods Lift"></div>
-                        <div class="product-card-body">
-                            <h3>Goods Lifts</h3>
-                            <p>Heavy-duty, robust lifting solutions for factories, warehouses, and industrial plants.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
-                        </div>
-                    </div>
+                            <!-- PASSENGER LIFTS - DESIGN 02 -->
+                            <div class="product-two-card" data-category="passenger">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_3.jpeg" alt="Capsule Panoramic Glass Elevator">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">Capsule Lift</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Panoramic Glass Elegance</span>
+                                    <h3 class="product-two-title">Capsule Panoramic Glass Elevator</h3>
+                                    <p class="product-two-desc">Architecturally striking glass-walled elevator offering breathtaking 180° to 360° views. Ideal for shopping malls, luxury hotels, corporate headquarters, and upscale residences.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Toughened Laminated Glass</span>
+                                        <span class="product-two-spec-item">Smooth Sightseeing</span>
+                                        <span class="product-two-spec-item">Iconic Façade Feature</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="passenger-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=capsule" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="product-card reveal" data-category="parking">
-                        <div class="product-image"><img src="assets/images/gallery/gal_8.jpeg" alt="Parking Lift"></div>
-                        <div class="product-card-body">
-                            <h3>Parking Lifts</h3>
-                            <p>Reliable automobile elevators and stack parking systems to maximize parking efficiency in busy areas.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
-                        </div>
-                    </div>
+                            <!-- M.R.L LIFTS - DESIGN 01 -->
+                            <div class="product-two-card" data-category="mrl">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_6.jpeg" alt="Gearless M.R.L Traction Lift">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">M.R.L Lift</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">No Overhead Machine Room</span>
+                                    <h3 class="product-two-title">Permanent Magnet Gearless MRL Elevator</h3>
+                                    <p class="product-two-desc">Eliminates the bulky rooftop machine room by mounting a compact, whisper-quiet gearless PMSM motor inside the hoistway, freeing valuable rooftop terrace space.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Zero Machine Room</span>
+                                        <span class="product-two-spec-item">40% Energy Savings</span>
+                                        <span class="product-two-spec-item">Whisper-Quiet</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="mrl-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=mrl" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="product-card reveal" data-category="escalators">
-                        <div class="product-image"><img src="assets/images/gallery/gal_6.jpeg" alt="Escalators"></div>
-                        <div class="product-card-body">
-                            <h3>Escalators</h3>
-                            <p>Efficient continuous transport for department stores, shopping malls, transit systems, and convention centers.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
-                        </div>
-                    </div>
+                            <!-- M.R.L LIFTS - DESIGN 02 -->
+                            <div class="product-two-card" data-category="mrl">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_16.jpeg" alt="Low-Headroom MRL Elevator">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">M.R.L Modern</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Compact Hoistway</span>
+                                    <h3 class="product-two-title">Low-Headroom Architectural MRL Cabin</h3>
+                                    <p class="product-two-desc">Custom engineered for tight shafts with reduced overhead and shallow pit depths. Equipped with regenerative braking and ultra-smooth roller guide rails.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Shallow Pit Friendly</span>
+                                        <span class="product-two-spec-item">Regenerative Drive</span>
+                                        <span class="product-two-spec-item">LED Dot-Matrix COP</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="mrl-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=mrl_modern" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="product-card reveal" data-category="dumbwaiter">
-                        <div class="product-image"><img src="assets/images/gallery/gal_7.jpeg" alt="Dumb Waiter"></div>
-                        <div class="product-card-body">
-                            <h3>Dumb Waiter</h3>
-                            <p>Compact service lifts providing efficient vertical transportation for moving goods effectively.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
-                        </div>
-                    </div>
-                    
-                    <div class="product-card reveal" data-category="service">
-                        <div class="product-image"><img src="assets/images/gallery/gal_18.jpeg" alt="Lift Service"></div>
-                        <div class="product-card-body">
-                            <h3>Lift Service & AMC</h3>
-                            <p>We offer Comprehensive, Non-Comprehensive, Predictive, and Preventive Maintenance AMC.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
-                        </div>
-                    </div>
+                            <!-- RESIDENTIAL LIFTS - DESIGN 01 -->
+                            <div class="product-two-card" data-category="residential">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_1.jpeg" alt="Home Bungalow Glass Elevator">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Residential Lift</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Villa & Duplex Home</span>
+                                    <h3 class="product-two-title">Panoramic Glass Home Bungalow Lift</h3>
+                                    <p class="product-two-desc">Custom-built private residence elevator designed to harmonize with home interiors. Operates on single-phase domestic power without intrusive civil excavations.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Single-Phase 230V</span>
+                                        <span class="product-two-spec-item">No Pit / 150mm Pit</span>
+                                        <span class="product-two-spec-item">Emergency Battery Rescue</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="residential-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=residential" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="product-card reveal" data-category="modification">
-                        <div class="product-image"><img src="assets/images/gallery/gal_15.jpeg" alt="Lift Modification"></div>
-                        <div class="product-card-body">
-                            <h3>Lift Modification</h3>
-                            <p>Upgrade and modernize your existing elevators to improve safety, aesthetics, and energy efficiency.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
+                            <!-- RESIDENTIAL LIFTS - DESIGN 02 -->
+                            <div class="product-two-card" data-category="residential">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_14.jpeg" alt="Compact Villa Designer Home Elevator">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">Villa Lift</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Minimal Footprint</span>
+                                    <h3 class="product-two-title">Compact Villa Designer Wood & Glass Cabin</h3>
+                                    <p class="product-two-desc">Space-saving residential cabin fitting inside stairwell voids or outdoor glass shafts. Features gentle start-stop transitions, child safety locks, and voice prompt assistance.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Stairwell Void Friendly</span>
+                                        <span class="product-two-spec-item">Ultra-Quiet Operation</span>
+                                        <span class="product-two-spec-item">Child Safety Interlocks</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="residential-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=residential_villa" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HYDRAULIC LIFTS - DESIGN 01 -->
+                            <div class="product-two-card" data-category="hydraulic">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_5.jpeg" alt="Smooth Electro-Hydraulic Elevator">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Hydraulic Lift</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Smooth & Powerful</span>
+                                    <h3 class="product-two-title">Electro-Hydraulic Precision Passenger Elevator</h3>
+                                    <p class="product-two-desc">Ideal for low-rise homes, showrooms, and luxury commercial properties. Requires minimal overhead space and provides gentle descent even during power outages.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Low Overhead Needed</span>
+                                        <span class="product-two-spec-item">Zero Power Descent</span>
+                                        <span class="product-two-spec-item">Smooth Cushion Stop</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="hydraulic-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=hydraulic" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HYDRAULIC LIFTS - DESIGN 02 -->
+                            <div class="product-two-card" data-category="hydraulic">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_9.jpeg" alt="Heavy-Duty Hydraulic Ram Lift">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">Heavy Hydraulic</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Heavy Load Capacity</span>
+                                    <h3 class="product-two-title">Direct-Acting Industrial Hydraulic Ram Lift</h3>
+                                    <p class="product-two-desc">Heavy-tonnage hydraulic solution equipped with high-pressure fluid valves and dual synchronization rams. Built to withstand punishing loads in manufacturing and warehousing.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">1,000 – 5,000 kg</span>
+                                        <span class="product-two-spec-item">Dual Ram Pistons</span>
+                                        <span class="product-two-spec-item">Burst Pipe Valve Safety</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="hydraulic-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=heavy_hydraulic" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- GOODS LIFTS - DESIGN 01 -->
+                            <div class="product-two-card" data-category="goods">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_10.jpeg" alt="Heavy Duty Industrial Goods Lift">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Goods Lift</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Factories & Workshops</span>
+                                    <h3 class="product-two-title">Heavy-Duty Industrial Cage Goods Lift</h3>
+                                    <p class="product-two-desc">Reinforced steel structural frame with collapsible or bi-parting shutter gates. Engineered for factory inventory movement, tool handling, and multi-floor stock transfer.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">500 – 4,000 kg Payload</span>
+                                        <span class="product-two-spec-item">Chequered Steel Floor</span>
+                                        <span class="product-two-spec-item">Interlocked Cage Gates</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="goods-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=goods" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- GOODS LIFTS - DESIGN 02 -->
+                            <div class="product-two-card" data-category="goods">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_21.jpeg" alt="Warehouse Pallet Cargo Elevator">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">Cargo Elevator</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Logistics & Warehouses</span>
+                                    <h3 class="product-two-title">Warehouse Freight & Pallet Cargo Elevator</h3>
+                                    <p class="product-two-desc">Enclosed steel cargo elevator with roll-in forklift flooring, bump guards, and heavy-duty traction or hydraulic drives for distribution centers and logistics hubs.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Forklift Drive-In Rated</span>
+                                        <span class="product-two-spec-item">Impact Guard Rails</span>
+                                        <span class="product-two-spec-item">Overload Safety Alert</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="goods-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=freight" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HOSPITAL STRETCHER LIFTS - DESIGN 01 -->
+                            <div class="product-two-card" data-category="hospital">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_4.jpeg" alt="Hospital Bed Stretcher Lift">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Hospital Stretcher</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Healthcare & Clinics</span>
+                                    <h3 class="product-two-title">Deep-Cabin Medical Stretcher & Bed Lift</h3>
+                                    <p class="product-two-desc">Deep carriage dimensions designed specifically to accommodate standard hospital beds, stretchers, wheel chairs, IV stands, and accompanying medical personnel with ease.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">15 – 26 Passengers / Bed</span>
+                                        <span class="product-two-spec-item">Jerk-Free Levelling</span>
+                                        <span class="product-two-spec-item">Priority Code-Blue Mode</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="hospital-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=hospital" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HOSPITAL STRETCHER LIFTS - DESIGN 02 -->
+                            <div class="product-two-card" data-category="hospital">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_17.jpeg" alt="Trauma Center Hospital Elevator">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">ICU & Trauma</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Sterile & Anti-Bacterial</span>
+                                    <h3 class="product-two-title">Trauma Center Sanitized Medical Elevator</h3>
+                                    <p class="product-two-desc">Features antimicrobial stainless steel walls, wide telescopic automatic doors, bump protection bumpers, and infrared light curtains that prevent door strikes on beds.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Antimicrobial SS Finish</span>
+                                        <span class="product-two-spec-item">Telescopic Wide Doors</span>
+                                        <span class="product-two-spec-item">Full-Height Light Curtain</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="hospital-lifts.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=hospital_icu" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CAR PARKING SYSTEM - DESIGN 01 -->
+                            <div class="product-two-card" data-category="parking">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/products/car_parking_system.jpg" alt="Automated Multi-Level Stack Car Parking">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Stack Parking</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Smart Space Multiplier</span>
+                                    <h3 class="product-two-title">Automated Multi-Level Stack Car Parking</h3>
+                                    <p class="product-two-desc">Doubles or triples vehicle parking capacity on identical ground footprints using heavy structural steel frames, hydraulic scissor lifts, and automated push-button control.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">2x – 3x Parking Density</span>
+                                        <span class="product-two-spec-item">Suits Sedans & SUVs</span>
+                                        <span class="product-two-spec-item">Anti-Fall Safety Locks</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="car-parking-system.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=parking_stack" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CAR PARKING SYSTEM - DESIGN 02 -->
+                            <div class="product-two-card" data-category="parking">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_8.jpeg" alt="Hydraulic Automobile Pit Elevator">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">Car Elevator</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Basement & Multi-Tier Transit</span>
+                                    <h3 class="product-two-title">Automobile Elevator & Pit Parking System</h3>
+                                    <p class="product-two-desc">Replaces steep concrete vehicle ramps with a high-capacity automobile elevator. Features heavy-duty guide rails, bi-parting doors, and multi-sensor wheel alignment detectors.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">2,500 – 5,000 kg Payload</span>
+                                        <span class="product-two-spec-item">Eliminates Steep Ramps</span>
+                                        <span class="product-two-spec-item">Dual Side Entry/Exit</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="car-parking-system.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=parking_pit" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ESCALATORS - DESIGN 01 -->
+                            <div class="product-two-card" data-category="escalators">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/products/prod_mall_escalator.jpeg" alt="Commercial Shopping Mall Escalator">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Mall Escalator</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">High Foot-Traffic Retail</span>
+                                    <h3 class="product-two-title">Heavy-Duty Commercial Shopping Mall Escalators</h3>
+                                    <p class="product-two-desc">Featuring crystal glass balustrades, integrated skirt LED lighting, yellow border stainless steel safety steps, and intelligent micro-step variable frequency eco drives.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">30° / 35° Inclination</span>
+                                        <span class="product-two-spec-item">9,000 Persons / Hour</span>
+                                        <span class="product-two-spec-item">LED Skirt Illumination</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="escalators.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=escalator_mall" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ESCALATORS - DESIGN 02 -->
+                            <div class="product-two-card" data-category="escalators">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/escalators.png" alt="Public Transit Metro Escalator">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">Transit Escalator</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Airports & Metro Hubs</span>
+                                    <h3 class="product-two-title">Public Transit Heavy-Duty Escalator & Moving Walkway</h3>
+                                    <p class="product-two-desc">Engineered for continuous 24/7 duty cycles with weather-resistant internal trussing, automatic chain lubrication, and comprehensive anti-reversal safety braking.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">24/7 Continuous Duty</span>
+                                        <span class="product-two-spec-item">High Step Width (1000mm)</span>
+                                        <span class="product-two-spec-item">Auto Chain Oiling</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="escalators.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=escalator_transit" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DUMB WAITER - DESIGN 01 -->
+                            <div class="product-two-card" data-category="dumbwaiter">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_7.jpeg" alt="Restaurant Food Service Dumb Waiter">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Dumb Waiter</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Hotels & Restaurants</span>
+                                    <h3 class="product-two-title">Food & Kitchen Service Dumb Waiter</h3>
+                                    <p class="product-two-desc">Food-grade SS 304 interior with removable shelves and vertical bi-parting shutter doors. Transports hot food, tableware, and cutlery safely between kitchen and dining floors.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">50 – 250 kg Capacity</span>
+                                        <span class="product-two-spec-item">Food-Grade SS 304</span>
+                                        <span class="product-two-spec-item">Bi-Parting Shutters</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="dumb-waiter.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=dumbwaiter" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DUMB WAITER - DESIGN 02 -->
+                            <div class="product-two-card" data-category="dumbwaiter">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_12.jpeg" alt="Commercial Document & Medical Dumb Waiter">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">Service Lift</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Hospitals & Offices</span>
+                                    <h3 class="product-two-title">Commercial Document & Medical Sample Lift</h3>
+                                    <p class="product-two-desc">Compact under-counter or waist-height service lift for rapid transit of sensitive pharmacy items, surgical kits, lab samples, and legal paperwork between floors.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Waist-Level Loading</span>
+                                        <span class="product-two-spec-item">Keyed Access Control</span>
+                                        <span class="product-two-spec-item">Floor Call & Send Buttons</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="dumb-waiter.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=dumbwaiter_office" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- LIFT SERVICE - DESIGN 01 -->
+                            <div class="product-two-card" data-category="service">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_18.jpeg" alt="Elevator Preventive Maintenance AMC">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Service AMC</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Preventive & Scheduled Care</span>
+                                    <h3 class="product-two-title">Scheduled Preventive Maintenance AMC</h3>
+                                    <p class="product-two-desc">Routine monthly inspection, lubrication of guide rails, safety gear testing, brake pad calibration, and door sensor alignment to prevent unexpected shutdowns.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Monthly Health Checks</span>
+                                        <span class="product-two-spec-item">Lubrication & Tuning</span>
+                                        <span class="product-two-spec-item">IS 14665 Safety Audit</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="lift-service.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=service_amc" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- LIFT SERVICE - DESIGN 02 -->
+                            <div class="product-two-card" data-category="service">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_19.jpeg" alt="24/7 Breakdown Rapid Response">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">Breakdown Service</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">24/7 Emergency Support</span>
+                                    <h3 class="product-two-title">24/7 Emergency Breakdown & Diagnostics</h3>
+                                    <p class="product-two-desc">Rapid-response mobile technical teams stationed across Pune for urgent passenger entrapment release, circuit troubleshooting, and same-day operational restoration.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">24/7 Helpline</span>
+                                        <span class="product-two-spec-item">Under 45-Min Arrival</span>
+                                        <span class="product-two-spec-item">Advanced Fault Scanners</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="lift-service.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=emergency_service" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- LIFT MODIFICATION - DESIGN 01 -->
+                            <div class="product-two-card" data-category="modification">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_15.jpeg" alt="Microprocessor VVVF Controller Modernization">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Controller Retrofit</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Control Modernization</span>
+                                    <h3 class="product-two-title">Microprocessor & VVVF Drive Modernization</h3>
+                                    <p class="product-two-desc">Replace aging relay panels with smart microprocessor controllers and VVVF variable-frequency drives. Eliminates floor-levelling errors and reduces power usage by 35%.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">35% Power Cut</span>
+                                        <span class="product-two-spec-item">Silky Floor Alignment</span>
+                                        <span class="product-two-spec-item">ARD Device Retrofit</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="lift-modification.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=controller_modernization" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- LIFT MODIFICATION - DESIGN 02 -->
+                            <div class="product-two-card" data-category="modification">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/doors.png" alt="Automatic Door Retrofit & Cabin Makeover">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">Door & Cabin</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Aesthetic & Safety Overhaul</span>
+                                    <h3 class="product-two-title">Automatic Door Conversion & Cabin Overhaul</h3>
+                                    <p class="product-two-desc">Convert hazardous manual collapsible gates to modern automatic stainless steel sliding doors with full-height infrared safety sensors and designer cabin wall panels.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">Auto Sliding Doors</span>
+                                        <span class="product-two-spec-item">Full-Height Light Curtain</span>
+                                        <span class="product-two-spec-item">Designer Stainless Steel</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="lift-modification.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=door_conversion" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- LIFT MAINTENANCE - DESIGN 01 -->
+                            <div class="product-two-card" data-category="maintenance">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/gal_11.jpeg" alt="Comprehensive Elevator Maintenance">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 01</div>
+                                    <div class="product-two-type-pill">Maintenance AMC</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Full Care Contract</span>
+                                    <h3 class="product-two-title">Comprehensive AMC Maintenance Package</h3>
+                                    <p class="product-two-desc">All-inclusive service agreement covering free replacement of worn parts, emergency breakdown visits, regulatory compliance checks, and regular preventive servicing.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">All Parts Covered</span>
+                                        <span class="product-two-spec-item">Zero Extra Repair Bills</span>
+                                        <span class="product-two-spec-item">Annual Safety Certificate</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="lift-maintenance.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=comprehensive_amc" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- LIFT MAINTENANCE - DESIGN 02 -->
+                            <div class="product-two-card" data-category="maintenance">
+                                <div class="product-two-img-box">
+                                    <img src="assets/images/gallery/cabin.png" alt="Genuine OEM Elevator Spares & Retrofits">
+                                    <div class="product-two-design-pill"><span class="dot"></span> Design 02</div>
+                                    <div class="product-two-type-pill">OEM Spares</div>
+                                </div>
+                                <div class="product-two-body">
+                                    <span class="product-two-tag">Genuine Components</span>
+                                    <h3 class="product-two-title">Genuine OEM Spares & Safety Retrofits</h3>
+                                    <p class="product-two-desc">Supply and precision installation of genuine steel wire ropes, traction sheaves, speed governors, roller guide shoes, door lock contacts, and push button panels.</p>
+                                    <div class="product-two-specs">
+                                        <span class="product-two-spec-item">100% Genuine Spares</span>
+                                        <span class="product-two-spec-item">Certified Steel Ropes</span>
+                                        <span class="product-two-spec-item">Manufacturer Warranty</span>
+                                    </div>
+                                    <div class="product-two-actions">
+                                        <a href="lift-maintenance.html" class="btn-card-explore">Explore Details &rarr;</a>
+                                        <a href="contact.html?product=oem_spares" class="btn-card-quote">Get Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-
-                    <div class="product-card reveal" data-category="maintenance">
-                        <div class="product-image"><img src="assets/images/gallery/gal_11.jpeg" alt="Lift Maintenance"></div>
-                        <div class="product-card-body">
-                            <h3>Lift Maintenance & Spares</h3>
-                            <p>Regular servicing and rapid repair handling with genuine, high-quality OEM spare parts.</p>
-                            <a href="contact.html" class="link-text">Explore</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card reveal" data-category="passenger">
-                        <div class="product-image"><img src="assets/images/products/prod_hotel_landing.jpeg" alt="Hotel & Commercial Landing Lift"></div>
-                        <div class="product-card-body">
-                            <h3>Hotel & Commercial Landing Lifts</h3>
-                            <p>Ultra-sleek brushed stainless steel elevator landing entrances with illuminated call pillars, dark wooden surround, and quiet high-speed traction drives for premium hotels and corporate headquarters.</p>
-                            <a href="contact.html?product=hotel_landing" class="link-text">Enquire Now</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card reveal" data-category="escalators">
-                        <div class="product-image"><img src="assets/images/products/prod_mall_escalator.jpeg" alt="Heavy-Duty Commercial Escalators"></div>
-                        <div class="product-card-body">
-                            <h3>Heavy-Duty Commercial Escalators</h3>
-                            <p>Energy-efficient heavy-duty escalators featuring LED skirt lighting, transparent glass balustrades, and anti-slip stainless steel steps for high-traffic shopping malls and transit hubs.</p>
-                            <a href="contact.html?product=mall_escalators" class="link-text">Enquire Now</a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -311,6 +853,7 @@
                 <h4>Products</h4>
                 <ul>
                     <li><a href="passenger-lifts.html">Passenger Lifts</a></li>
+                    <li><a href="car-parking-system.html">Car Parking System</a></li>
                     <li><a href="mrl-lifts.html">M.R.L Lifts</a></li>
                     <li><a href="residential-lifts.html">Residential Lifts</a></li>
                     <li><a href="hospital-lifts.html">Hospital Lifts</a></li>
@@ -336,7 +879,7 @@
                 </ul>
                 <div class="footer-map-box">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.6448264250575!2d73.81385877470599!3d18.43881117166758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295f7e015180b%3A0x8e78a09d4c349c82!2sKrupasindhu%20apartment!5e1!3m2!1sen!2sin!4v1792648341815!5m2!1sen!2sin" 
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3784.664069812423!2d73.81923067469707!3d18.43277777169493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI1JzU4LjAiTiA3M8KwNDknMTguNSJF!5e0!3m2!1sen!2sin!4v1730367000000!5m2!1sen!2sin" 
                         width="100%" 
                         height="100%" 
                         style="border:0;" 
